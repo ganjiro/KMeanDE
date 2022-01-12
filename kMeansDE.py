@@ -174,7 +174,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
                 best = trial
                 best_index = i
         if self.verbose:
-            print("Best solution is the" + str(best_index + 1) + "-th element of the population, centroids: ",
+            print("Best solution is the" + str(best_index + 1) + "-th element of the population,\ncentroids:\n",
                   self.population[best_index].cluster_centers)
         return self.population[best_index]
 
