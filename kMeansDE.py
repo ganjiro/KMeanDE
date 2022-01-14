@@ -211,14 +211,12 @@ class KMeansDE(BaseEstimator, ClusterMixin):
         return self
 
     def _matching(self, reference, parent_1, parent_2):
-        # print("p1", parent_1)
-        # print("p2", parent_2)
+
         distances1 = pairwise_distances(reference, parent_1)
         distances2 = pairwise_distances(reference, parent_2)
         parent_1 = self._reorder(distances1, parent_1)
         parent_2 = self._reorder(distances2, parent_2)
-        # print("p1", parent_1)
-        # print("p2", parent_2)
+
         return parent_1, parent_2
 
     @staticmethod
