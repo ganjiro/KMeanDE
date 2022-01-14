@@ -20,7 +20,7 @@ class Solution:
 
 class KMeansDE(BaseEstimator, ClusterMixin):
 
-    def __init__(self, n_clusters=2, max_iter=5000, tol=1e-3,
+    def __init__(self, n_clusters=2, max_iter=5000, tol=1e-4,
                  verbose=0, population_lenght=150, kmeans_max_iter=5000, scaling=True, dataset_name="None"):
         self.n_clusters = n_clusters
         self.max_iter = max_iter
@@ -32,7 +32,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
         self.kmeans_max_iter = kmeans_max_iter
         self.population = None
         self.data = None
-        self.print_parameters()
+        self._print_parameters()
 
     def _compute_crossover(self, parent_1, parent_2, parent_3):  # S1 + F(S2-S3)
         f = random.uniform(0.5, 0.8)
@@ -103,7 +103,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
         adder = 0
 
-        population_unique = self.unique()
+        population_unique = self._unique()
         if len(population_unique) < len(self.population) and self.verbose:
             print("Number of redundant population elements: ", len(self.population) - len(population_unique))
 
@@ -116,7 +116,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
         if adder <= self.tol:
             if self.verbose:
-                print("Second stopping criterion, population has converged\n")
+                print("Second stopping criterion, population has converged with precision:", adder)
             return False
         else:
             return True
@@ -234,7 +234,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
             temp.append(parent[min_idx])
         return temp
 
-    def unique(self):
+    def _unique(self):
         set_list = [set(self.population[0].cluster_centers.flatten())]
 
         population_unique = [self.population[0]]
@@ -252,7 +252,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
         return population_unique
 
-    def print_parameters(self):
+    def _print_parameters(self):
         print("******* Starting KMeansDE *******")
         print("Datset:", self.dataset_name)
         if self.scaling:
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     # bupa_data = np.delete(bupa_data, 2, 1)
     # data = np.delete(data, 1, 1)
 
-    km = KMeansDE(n_clusters=4, verbose=1, scaling=True, dataset_name=dataset_name)
+    km = KMeansDE(n_clusters=6, verbose=1, scaling=True, dataset_name=dataset_name)
 
     km.fit_predict(bupa_data)
 

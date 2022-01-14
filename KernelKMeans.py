@@ -4,6 +4,9 @@
 # License: BSD 3 clause
 
 import numpy as np
+import pandas as pd  # For data management
+from sklearn.preprocessing import StandardScaler  # To transform the dataset
+
 
 from sklearn.base import BaseEstimator, ClusterMixin
 from sklearn.metrics.pairwise import pairwise_kernels
@@ -21,9 +24,9 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
     KDD 2004.
     """
 
-    def __init__(self, n_clusters=3, max_iter=50, tol=1e-3, random_state=None,
+    def __init__(self, n_clusters=2, max_iter=50, tol=1e-4, random_state=None,
                  kernel="linear", gamma=None, degree=3, coef0=1,
-                 kernel_params=None, verbose=0, init='random'):
+                 kernel_params=None, verbose=0, init='random', scaling=True, dataset_name="None"):
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.tol = tol
@@ -35,6 +38,10 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         self.kernel_params = kernel_params
         self.verbose = verbose
         self.init = init
+        self.scaling = scaling
+        self.dataset_name = dataset_name
+        self._print_parameters()
+
 
     @property
     def _pairwise(self):
@@ -51,6 +58,8 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
                                 filter_params=True, **params)
 
     def fit(self, X, y=None, sample_weight=None):
+        self._prepareDataset(X) # TODO CHECK che X è il mio dataset
+
         n_samples = X.shape[0]
 
         K = self._get_kernel(X)
@@ -58,7 +67,7 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         sw = sample_weight if sample_weight else np.ones(n_samples)
         self.sample_weight_ = sw
 
-        if self.init =='random':
+        if self.init == 'random':  # TODO CHECK
             rs = check_random_state(self.random_state)
             self.labels_ = rs.randint(self.n_clusters, size=n_samples)
         else:
@@ -84,13 +93,35 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
 
         self.X_fit_ = X
 
-
-
         return self
+
+    def _prepareDataset(self, data):
+
+        data = pd.DataFrame(data)
+
+        if self.verbose:
+            print("\nHead of dataset")
+            print(data.head())
+
+        if self.scaling:
+            print("\nScaling dataset...")
+            scaler = StandardScaler()
+            scaled_array = scaler.fit_transform(data)
+            data = pd.DataFrame(scaled_array, columns=data.columns)
+            if self.verbose:
+                print("Head of scaled dataset")
+                print(data.head())
+
+        if self.verbose:
+            print("\nShape of dataset: ", data.shape)
+
+        self.data = data.to_numpy()
+
+        print("\n******* Initialization *******")
+        return
 
     def _compute_centroids(self, kernel):
         self.coef0
-
 
     def _compute_dist(self, K, dist, within_distances, update_within):
         """Compute a n_samples x n_clusters distance matrix using the
@@ -124,12 +155,36 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
                            update_within=False)
         return dist.argmin(axis=1)
 
+    def _print_parameters(self):
+        print("******* Starting KernelKMeans *******")
+        print("Datset:", self.dataset_name)
+        if self.scaling:
+            print("Dataset will be scaled")
+        else:
+            print("Dataset will not be scaled")
+        print("Number of clusters:", self.n_clusters)
+        print("Tolerance:", self.tol)
+        print("Fit maximum iteration limit:", self.max_iter)
+        print()
 
 if __name__ == '__main__':
+    '''
     from sklearn.datasets import make_blobs
-
     X, y = make_blobs(n_samples=1000, centers=5, random_state=0)
-
     km = KernelKMeans(n_clusters=5, max_iter=100, random_state=0, verbose=1)
-
     print(km.fit_predict(X)[:10])
+    '''
+    dataset_name = "bupa.data"
+    bupa_data = np.loadtxt(dataset_name, delimiter=',')
+    bupa_data = np.delete(bupa_data, 6, 1)
+    # bupa_data = np.delete(bupa_data, 5, 1)
+    # bupa_data = np.delete(bupa_data, 4, 1)
+    # bupa_data = np.delete(bupa_data, 3, 1)
+    # for _ in range(250):
+    #     data = np.delete(data, -1, 0)
+    # bupa_data = np.delete(bupa_data, 2, 1)
+    # data = np.delete(data, 1, 1)
+    kkm = KernelKMeans(n_clusters=5, max_iter=5000, random_state=0, verbose=1, scaling=True, dataset_name=dataset_name)
+    result = kkm.fit_predict(bupa_data)
+    print(result)
+
