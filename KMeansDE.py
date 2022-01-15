@@ -164,6 +164,17 @@ class KMeansDE(BaseEstimator, ClusterMixin):
     def _improvement(self, initial_solution, new_centroids):
         return new_centroids.ss_distance < initial_solution.ss_distance
 
+    # TODO REMOVE INUTILE
+    def get_membership(self):
+        best = self.population[0].ss_distance
+        best_index = 0
+        for i in range(self.population_lenght - 1):
+            trial = self.population[0].ss_distance
+            if trial < best:
+                best = trial
+                best_index = i
+        return self.population[best_index].label
+
     def _best_solution(self):
 
         best = self.population[0].ss_distance
@@ -175,7 +186,8 @@ class KMeansDE(BaseEstimator, ClusterMixin):
                 best_index = i
         if self.verbose:
             print("Best solution is the" + str(best_index + 1) + "-th element of the population,\ncentroids:\n",
-                  self.population[best_index].cluster_centers)
+                  self.population[best_index].cluster_centers, "\nmembership:\n",
+                  self.population[best_index].label)
         return self.population[best_index]
 
     def fit(self, data):
@@ -282,9 +294,8 @@ if __name__ == '__main__':
     # bupa_data = np.delete(bupa_data, 2, 1)
     # data = np.delete(data, 1, 1)
 
-    km = KMeansDE(n_clusters=6, verbose=1, scaling=True, dataset_name=dataset_name)
+    km = KMeansDE(n_clusters=5, verbose=1, scaling=True, dataset_name=dataset_name)
+    membership = km.fit_predict(bupa_data)
+    print("\n\nMembership vector:")
+    print(membership)
 
-    km.fit_predict(bupa_data)
-
-# [[86.90502793 69.20111732]
-# [93.6686747  70.59036145]]

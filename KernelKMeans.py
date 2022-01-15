@@ -5,6 +5,7 @@
 
 import numpy as np
 import pandas as pd  # For data management
+import pylab
 from sklearn.preprocessing import StandardScaler  # To transform the dataset
 
 
@@ -54,6 +55,7 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
             params = {"gamma": self.gamma,
                       "degree": self.degree,
                       "coef0": self.coef0}
+        self.kernel = "rbf" # TODO REMOVE
         return pairwise_kernels(X, Y, metric=self.kernel,
                                 filter_params=True, **params)
 
@@ -120,8 +122,6 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         print("\n******* Initialization *******")
         return
 
-    def _compute_centroids(self, kernel):
-        self.coef0
 
     def _compute_dist(self, K, dist, within_distances, update_within):
         """Compute a n_samples x n_clusters distance matrix using the
@@ -153,6 +153,8 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         dist = np.zeros((n_samples, self.n_clusters))
         self._compute_dist(K, dist, self.within_distances_,
                            update_within=False)
+        # print("Clusters:")
+        # print(dist.min(axis=1))
         return dist.argmin(axis=1)
 
     def _print_parameters(self):
@@ -177,14 +179,10 @@ if __name__ == '__main__':
     dataset_name = "bupa.data"
     bupa_data = np.loadtxt(dataset_name, delimiter=',')
     bupa_data = np.delete(bupa_data, 6, 1)
-    # bupa_data = np.delete(bupa_data, 5, 1)
-    # bupa_data = np.delete(bupa_data, 4, 1)
-    # bupa_data = np.delete(bupa_data, 3, 1)
-    # for _ in range(250):
-    #     data = np.delete(data, -1, 0)
-    # bupa_data = np.delete(bupa_data, 2, 1)
-    # data = np.delete(data, 1, 1)
+
     kkm = KernelKMeans(n_clusters=5, max_iter=5000, random_state=0, verbose=1, scaling=True, dataset_name=dataset_name)
-    result = kkm.fit_predict(bupa_data)
-    print(result)
+    membership = kkm.fit_predict(bupa_data)
+    print("\n\nMembership vector:")
+    print(membership)
+
 
