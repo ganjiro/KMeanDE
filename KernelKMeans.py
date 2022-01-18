@@ -8,7 +8,6 @@ import pandas as pd  # For data management
 import pylab
 from sklearn.preprocessing import StandardScaler  # To transform the dataset
 
-
 from sklearn.base import BaseEstimator, ClusterMixin
 from sklearn.metrics.pairwise import pairwise_kernels
 from sklearn.utils import check_random_state
@@ -25,7 +24,7 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
     KDD 2004.
     """
 
-    def __init__(self, n_clusters=2, max_iter=50, tol=1e-4, random_state=None,
+    def __init__(self, n_clusters=2, max_iter=500, tol=1e-4, random_state=None,
                  kernel="linear", gamma=None, degree=3, coef0=1,
                  kernel_params=None, verbose=0, init='random', scaling=True, dataset_name="None"):
         self.n_clusters = n_clusters
@@ -43,7 +42,6 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         self.dataset_name = dataset_name
         self._print_parameters()
 
-
     @property
     def _pairwise(self):
         return self.kernel == "precomputed"
@@ -55,12 +53,12 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
             params = {"gamma": self.gamma,
                       "degree": self.degree,
                       "coef0": self.coef0}
-        self.kernel = "rbf" # TODO REMOVE
+        self.kernel = "linear"  # TODO REMOVE
         return pairwise_kernels(X, Y, metric=self.kernel,
                                 filter_params=True, **params)
 
     def fit(self, X, y=None, sample_weight=None):
-        self._prepareDataset(X) # TODO CHECK che X è il mio dataset
+        self._prepareDataset(X)  # TODO CHECK che X è il mio dataset
 
         n_samples = X.shape[0]
 
@@ -122,7 +120,6 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         print("\n******* Initialization *******")
         return
 
-
     def _compute_dist(self, K, dist, within_distances, update_within):
         """Compute a n_samples x n_clusters distance matrix using the
         kernel trick."""
@@ -169,6 +166,7 @@ class KernelKMeans(BaseEstimator, ClusterMixin):
         print("Fit maximum iteration limit:", self.max_iter)
         print()
 
+
 if __name__ == '__main__':
     '''
     from sklearn.datasets import make_blobs
@@ -184,5 +182,3 @@ if __name__ == '__main__':
     membership = kkm.fit_predict(bupa_data)
     print("\n\nMembership vector:")
     print(membership)
-
-
