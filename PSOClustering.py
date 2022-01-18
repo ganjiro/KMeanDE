@@ -41,7 +41,7 @@ class Particle:
 class PSClustering(BaseEstimator, ClusterMixin):
 
     def __init__(self, n_clusters=2, max_iter=5000, tol=1e-3,
-                 verbose=0, population_lenght=1000, kmeans_max_iter=5000, scaling=True,
+                 verbose=0, population_lenght=100, kmeans_max_iter=5000, scaling=True,
                  dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72):
         self.n_clusters = n_clusters
         self.max_iter = max_iter
