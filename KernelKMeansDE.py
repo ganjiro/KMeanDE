@@ -274,17 +274,13 @@ if __name__ == '__main__':
     bupa_data = np.loadtxt(dataset_name, delimiter=',')
 
     bupa_data = np.delete(bupa_data, 6, 1)
-    # bupa_data = np.delete(bupa_data, 5, 1)
-    # bupa_data = np.delete(bupa_data, 4, 1)
-    # bupa_data = np.delete(bupa_data, 3, 1)
+    bupa_data = np.delete(bupa_data, 5, 1)
+    bupa_data = np.delete(bupa_data, 4, 1)
+    bupa_data = np.delete(bupa_data, 3, 1)
 
-    # for _ in range(250):
-    #     data = np.delete(data, -1, 0)
+    bupa_data = np.delete(bupa_data, 2, 1)
 
-    # bupa_data = np.delete(bupa_data, 2, 1)
-    # data = np.delete(data, 1, 1)
-
-    km = KMeansDE(n_clusters=4, verbose=1, scaling=True, dataset_name=dataset_name)
+    km = KMeansDE(n_clusters=5, verbose=1, scaling=True, dataset_name=dataset_name)
 
     km.fit_predict(bupa_data)
 

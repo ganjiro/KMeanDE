@@ -22,13 +22,14 @@ class Particle:
 
         self.best_ss_distance = self.ss_distance
         self.best_position = self.cluster_centers
-        self.velocity = [[np.random.uniform(low=0.0, high=0.1, size=1)[0] for _ in range(len(data[0]))] for _ in range(len(cluster_centers))]
+        self.velocity = [[np.random.uniform(low=0.0, high=0.1, size=1)[0] for _ in range(len(data[0]))] for _ in
+                         range(len(cluster_centers))]
 
     def update(self, cluster_centers, data, velocity):
         self.cluster_centers = cluster_centers
         self.velocity = velocity
         self.label = compute_labels(data, np.array([1.0 for _ in range(len(data))]),
-                                    np.array([LA.norm(i)**2 for i in data]), self.cluster_centers) #todo check
+                                    np.array([LA.norm(i) ** 2 for i in data]), self.cluster_centers)  # todo check
         self.ss_distance = np.sum(
             [distance.pdist([cluster_centers[i], data[self.label == i][j]], 'sqeuclidean') for i in
              range(len(cluster_centers)) for j in range(len(data[self.label == i]))])
@@ -41,8 +42,8 @@ class Particle:
 class PSClustering(BaseEstimator, ClusterMixin):
 
     def __init__(self, n_clusters=2, max_iter=5000, tol=1e-3,
-                 verbose=0, population_lenght=100, kmeans_max_iter=5000, scaling=True,
-                 dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72):
+                 verbose=0, population_lenght=20, scaling=True,
+                 dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72, max_cons_iter=500):
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.tol = tol
@@ -50,12 +51,13 @@ class PSClustering(BaseEstimator, ClusterMixin):
         self.dataset_name = dataset_name
         self.population_lenght = population_lenght
         self.verbose = verbose
-        self.kmeans_max_iter = kmeans_max_iter
+
         self.population = None
         self.data = None
         self.cognitive = cognitive
         self.social = social
         self.inertia = inertia
+        self.max_cons_iter = max_cons_iter
         if self.verbose:
             self.print_parameters()
 
@@ -86,7 +88,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
             print("\n******* Initialization *******")
         return
 
-    def _initializeS(self):
+    def _initializePopulation(self):
         self.population = []
 
         for i in range(self.population_lenght // 3):
@@ -115,12 +117,19 @@ class PSClustering(BaseEstimator, ClusterMixin):
 
         return
 
-    def _stopping_criterion(self, itr):
+    def _stopping_criterion(self, itr, count_cons_iter):
 
         if itr >= self.max_iter:
             if self.verbose:
                 print("First stopping criterion, reach maximum iteration limit\n")
             return False
+
+        if count_cons_iter >= self.max_cons_iter:
+            if self.verbose:
+                print("Third stopping criterion, reach maximum consecutive iteration without improvements\n")
+            return False
+        if self.verbose:
+            print("Consecutive iteration without improvements", count_cons_iter)
 
         adder = 0
 
@@ -142,7 +151,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
         else:
             return True
 
-    def _best_solution(self):
+    def _best_solution(self, ending=False):
 
         best = self.population[0].ss_distance
         best_index = 0
@@ -151,18 +160,18 @@ class PSClustering(BaseEstimator, ClusterMixin):
             if trial < best:
                 best = trial
                 best_index = i
-        if self.verbose:
-            print("Best solution is the" + str(best_index + 1) + "-th element of the population,\ncentroids:\n",
-                  self.population[best_index].cluster_centers)
+
         return self.population[best_index]
 
     def fit(self, data):
         self._prepareDataset(data)
-        self._initializeS()
+        self._initializePopulation()
 
         count_iter = 0
+        count_cons_iter = 0
+        best_ss_distance = math.inf
 
-        while self._stopping_criterion(count_iter):
+        while self._stopping_criterion(count_iter, count_cons_iter):
             count_iter += 1
             if self.verbose:
                 print("\n\n******* Iteration-" + str(count_iter) + " *******")
@@ -171,7 +180,9 @@ class PSClustering(BaseEstimator, ClusterMixin):
             for particle in self.population:
                 new_velocitys = []
                 new_centers = []
-                mached_self_best, matched_global_best_position =self._matching(particle.cluster_centers, particle.best_position, global_best_position)
+                mached_self_best, matched_global_best_position = self._matching(particle.cluster_centers,
+                                                                                particle.best_position,
+                                                                                global_best_position)
                 for i in range(len(particle.cluster_centers)):
                     new_velocity = []
                     new_center = []
@@ -182,7 +193,8 @@ class PSClustering(BaseEstimator, ClusterMixin):
 
                         new_velocity.append(self.inertia * particle.velocity[i][j] + self.cognitive * (
                                 mached_self_best[i][j] - particle.cluster_centers[i][j]) * r1 + self.social * (
-                                                    matched_global_best_position[i][j] - particle.cluster_centers[i][j]) * r2)
+                                                    matched_global_best_position[i][j] - particle.cluster_centers[i][
+                                                j]) * r2)
 
                         new_center.append(particle.cluster_centers[i][j] + new_velocity[j])
 
@@ -191,20 +203,25 @@ class PSClustering(BaseEstimator, ClusterMixin):
 
                 particle.update(np.array(new_centers), self.data, new_velocitys)
 
+            best_solution = self._best_solution(ending=True)
+            if best_solution.ss_distance < best_ss_distance:
+                best_ss_distance = self._best_solution().ss_distance
+                count_cons_iter = 0
+            else:
+                count_cons_iter += 1
+
         best_solution = self._best_solution()
         self.labels_ = best_solution.label
         self.cluster_centers_ = best_solution.cluster_centers
         return self
 
     def _matching(self, reference, parent_1, parent_2):
-        # print("p1", parent_1)
-        # print("p2", parent_2)
+
         distances1 = pairwise_distances(reference, parent_1)
         distances2 = pairwise_distances(reference, parent_2)
         parent_1 = self._reorder(distances1, parent_1)
         parent_2 = self._reorder(distances2, parent_2)
-        # print("p1", parent_1)
-        # print("p2", parent_2)
+
         return parent_1, parent_2
 
     @staticmethod
@@ -234,7 +251,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
         print("Tolerance:", self.tol)
         print("Size of population:", self.population_lenght)
         print("Fit maximum iteration limit:", self.max_iter)
-        print("KMeans subroutine maximum iteration limit:", self.kmeans_max_iter)
+
         print()
 
     def _get_global_best(self):
@@ -303,44 +320,25 @@ if __name__ == '__main__':
     bupa_data = np.delete(bupa_data, 4, 1)
     bupa_data = np.delete(bupa_data, 3, 1)
 
-    for _ in range(250):
-        bupa_data = np.delete(bupa_data, -1, 0)
+    # for _ in range(250):
+    #     bupa_data = np.delete(bupa_data, -1, 0)
 
     bupa_data = np.delete(bupa_data, 2, 1)
     # data = np.delete(data, 1, 1)
 
     km = PSClustering(n_clusters=5, verbose=1, scaling=True, dataset_name=dataset_name)
 
-
     print(km.fit_predict(bupa_data))
     print(km.cluster_centers_)
 
-# [2 3 3 2 3 3 3 3 3 3 3 3 3 3 3 2 3 3 2 2 3 3 3 3 2 3 3 3 2 3 3 3 3 2 3 0 3
-#  3 2 3 2 3 2 2 3 3 3 3 3 3 3 3 0 3 3 3 2 3 1 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3
-#  3 3 2 1 3 1 2 3 2 3 0 3 3 3 3 2 3 3 1 3 3 3 3 2 3 1 3 3 3 2 2 3 2 2 3 2 2
-#  2 3 2 0 3 3 3 2 3 1 2 2 3 2 3 1 1 3 3 1 1 0 0 3 3 3 1 1 1 1 1 1 1 1 1 1 0
-#  1 1 0 1 1 3 1 1 0 1 2 1 1 1 1 1 3 1 0 0 0 1 2 1 1 1 0 1 1 1 0 1 0 1 0 1 1
-#  0 0 1 0 0 3 3 2 2 3 2 3 3 3 2 3 3 2 2 2 2 3 2 2 3 2 3 2 2 3 2 3 2 3 2 2 3
-#  3 3 3 3 2 2 2 3 3 3 0 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 3 3 2 3 3 3 3
-#  3 2 2 1 3 2 2 2 2 3 3 3 1 3 3 3 3 2 0 3 1 3 3 3 3 1 0 3 1 2 3 3 3 3 3 0 3
-#  3 2 1 0 1 3 1 1 2 1 0 3 1 1 0 0 1 1 1 0 0 1 1 1 2 1 0 3 1 1 1 1 1 3 0 1 1
-#  0 2 1 2 1 1 0 1 0 0 1 0]
-# [[ 0.60910872  0.31838428  1.91561867  2.04705959  1.96473953  1.18116596]
-#  [ 0.83581078 -0.16362428 -0.15769155 -0.09719618 -0.07364267  0.82510064]
-#  [-0.46631036  1.26651864  0.00257058 -0.01427659 -0.02975714 -0.38803179]
-#  [-0.34580962 -0.52556044 -0.36267129 -0.4147475  -0.40078857 -0.50416561]]
+# [[0.06059718  1.68454103]
+#  [1.49680408 - 0.21855616]
+#  [0.02352025 - 1.02842233]
+#  [0.09208318  0.06859595]
+# [-1.30955163 - 0.2205655]]
 
-
-
-# 5 clust 2 dim
-#pop 50
-
-# [1 4 4 3 3 2 3 3 0 3 0 4 3 1 2 3 3 3 1 1 0 0 3 2 1 3 0 3 1 4 1 0 3 1 2 3 4
-#  4 1 3 1 3 1 1 4 3 0 2 3 4 3 4 0 0 4 4 1 0 2 3 0 3 0 0 3 3 3 4 2 3 3 3 3 3
-#  4 3 1 2 0 2 1 0 1 2 0 2 0 3 3 1 3 4 2 3 3]
-# [[ 0.34385715 -1.01746757]
-#  [-0.54190858  1.57003757]
-#  [ 1.75904608 -0.12596902]
-#  [-0.00390408  0.11166404]
-#  [-1.25750258 -0.8421645 ]]
-
+# [[ 1.56154266  0.3099195 ]
+#  [ 0.53947026 -0.94654934]
+#  [-0.24302265  1.74391844]
+#  [-1.19552677 -0.62618128]
+#  [-0.04631541  0.12639116]]
