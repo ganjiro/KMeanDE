@@ -1,4 +1,6 @@
 import math
+import time
+
 import numpy as np  # For data management
 import pandas as pd  # For data management
 from scipy.spatial import distance
@@ -40,8 +42,11 @@ class Particle:
 class PSClustering(BaseEstimator, ClusterMixin):
 
     def __init__(self, n_clusters=3, max_iter=5000, tol=1e-3,
-                 verbose=0, population_lenght=20, scaling=True,
-                 dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72, max_cons_iter=500):
+                 verbose=0, population_lenght=20, scaling=False,
+                 dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72, max_cons_iter=250, test=False):
+        self.test = test
+        if self.test:
+            self.start = time.time()
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.tol = tol
@@ -57,8 +62,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
         self.inertia = inertia
         self.max_cons_iter = max_cons_iter
         self.best_solution_ss_distance_ = None
-        if self.verbose:
-            self.print_parameters()
+        self.print_parameters()
 
     def _prepareDataset(self, data):
 
@@ -208,11 +212,21 @@ class PSClustering(BaseEstimator, ClusterMixin):
                 count_cons_iter = 0
             else:
                 count_cons_iter += 1
-
+        end = time.time()
         best_solution = self._best_solution()
         self.best_solution_ss_distance_ = best_solution.ss_distance
         self.labels_ = best_solution.label
         self.cluster_centers_ = best_solution.cluster_centers
+        if self.verbose or self.test:
+            print("Centroids:\n",
+                  self.cluster_centers_, "\nMembership Vector:\n",
+                  self.labels_, "\nMSSC:\n", self.best_solution_ss_distance_)
+        if self.test:
+            print("Time:\n", end-self.start)
+        if self.verbose or self.test:
+            print("\n******* Ending Particle Swarm Clustering *********************************************"
+                  "*************************************\n\n")
+
         return self
 
     def _matching(self, reference, parent_1, parent_2):
@@ -241,8 +255,8 @@ class PSClustering(BaseEstimator, ClusterMixin):
 
     def print_parameters(self):
 
-        print("******* Starting Particle Swarm Clustering *******")
-        print("Datset:", self.dataset_name)
+        print("******* Starting Particle Swarm Clustering *********************************************************************************************")
+        print("Dataset:", self.dataset_name)
         if self.scaling:
             print("Dataset will be scaled")
         else:
@@ -312,25 +326,14 @@ def compute_labels(X, sample_weight, x_squared_norms, centers, n_threads=1):
 
 
 if __name__ == '__main__':
-    dataset_name = "bupa.data"
+    dataset_name = "datasets/bupa.data"
     dataset = np.loadtxt(dataset_name, delimiter=',')
-
     dataset = np.delete(dataset, 6, 1)
-    dataset = np.delete(dataset, 5, 1)
-    dataset = np.delete(dataset, 4, 1)
-    dataset = np.delete(dataset, 3, 1)
-    for _ in range(250):
-        dataset = np.delete(dataset, -1, 0)
-    dataset = np.delete(dataset, 2, 1)
-    # dataset = np.delete(dataset, 1, 1)
 
     pso = PSClustering(n_clusters=3, max_iter=5000, verbose=1, scaling=True, dataset_name=dataset_name)
 
     membership = pso.fit_predict(dataset)
-    print("\n\nMembership vector:")
-    print(membership)
-    print("\n\nCentroids:")
-    print(pso.cluster_centers_)
+
 
 # [[0.06059718  1.68454103]
 #  [1.49680408 - 0.21855616]
@@ -344,16 +347,27 @@ if __name__ == '__main__':
 #  [-1.19552677 -0.62618128]
 #  [-0.04631541  0.12639116]]
 
-# small data in 2d
+# Full dataset 2d, 3 clusters in 2d
 '''
-Membership vector:
-[2 0 0 2 0 1 0 0 1 0 0 0 0 2 1 2 0 2 2 2 1 1 0 1 2 1 0 0 2 0 2 0 1 2 1 2 0
- 0 2 0 2 0 2 2 0 0 1 1 2 0 2 0 1 1 0 0 2 0 1 0 0 2 0 0 0 2 0 0 1 0 0 0 0 2
- 0 2 2 1 0 1 2 0 2 1 1 1 0 1 2 2 0 0 1 0 0]
-
+Second stopping criterion, population has converged
 
 Centroids:
-[[-0.45057064 -0.5547412 ]
- [ 1.30837001 -0.26142896]
- [-0.27664336  1.17191425]] 
+ [[-0.97642613 -0.48768934]
+ [ 0.01271797  1.32761422]
+ [ 0.68906392 -0.43099218]] 
+
+Membership Vector:
+ [1 0 0 1 0 2 0 0 2 2 0 0 2 0 2 1 0 1 1 1 2 2 2 2 0 2 2 0 1 0 0 2 2 1 2 2 0
+ 0 1 0 1 0 1 1 0 0 2 2 2 0 0 0 2 2 0 0 0 0 2 2 2 2 2 2 0 1 0 0 2 2 2 2 0 2
+ 0 1 1 2 2 2 1 0 1 2 2 2 0 2 1 0 0 0 2 0 0 2 0 1 0 2 0 2 0 1 1 0 1 1 2 1 0
+ 1 0 1 1 0 2 0 1 2 2 1 1 1 1 2 2 2 0 2 2 2 0 2 0 0 0 2 2 2 1 2 2 2 2 1 2 2
+ 2 2 0 1 2 0 2 2 2 1 1 2 1 2 2 2 0 0 1 1 1 2 1 2 2 1 2 2 2 2 1 2 2 1 2 0 2
+ 2 1 1 2 1 0 0 1 1 2 1 0 0 2 1 2 0 1 0 1 1 2 1 1 0 1 0 1 1 2 1 1 1 0 1 1 1
+ 0 0 2 0 1 0 0 0 2 0 2 2 0 2 2 2 2 0 0 0 0 0 2 1 2 2 2 2 1 0 2 2 0 0 0 0 0
+ 2 0 1 2 2 0 1 1 1 0 2 0 2 2 2 2 0 0 0 2 2 0 0 0 0 2 1 2 2 0 2 2 0 2 0 1 0
+ 0 0 2 2 2 2 2 2 1 2 2 0 2 1 2 1 2 2 2 2 2 1 2 1 1 2 2 0 2 2 2 0 1 0 2 2 2
+ 1 1 2 1 1 1 0 2 2 2 2 1] 
+
+MSSC:
+ 308.3257909276566
 '''

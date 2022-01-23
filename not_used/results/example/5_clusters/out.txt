@@ -1,0 +1,3275 @@
+C:\Users\mistr\OneDrive\Desktop\pythonProject\KMeanDE\venv\Scripts\python.exe C:/Users/mistr/OneDrive/Desktop/pythonProject/KMeanDE/main_test_plot.py
+******* Starting KMeansDE *******
+Datset: bupa.data
+Dataset will be scaled
+Number of clusters: 5
+Tolerance: 0.0001
+Size of population: 100
+Fit maximum iteration limit: 5000
+KMeans subroutine maximum iteration limit: 5000
+
+
+Head of dataset
+      0     1
+0  85.0  92.0
+1  85.0  64.0
+2  86.0  54.0
+3  91.0  78.0
+4  87.0  70.0
+
+Scaling dataset...
+Head of scaled dataset
+          0         1
+0 -1.161601  1.207923
+1 -1.161601 -0.320373
+2 -0.936459 -0.866193
+3  0.189250  0.443775
+4 -0.711318  0.007119
+
+Shape of dataset:  (345, 2)
+
+******* Initialization *******
+Consecutive iteration without improvement: 0
+Objective tollerance: 0.0001  Actual precision: 144014.87051119222
+
+
+******* Iteration-1 *******
+Consecutive iteration without improvement: 0
+Number of redundant population elements:  22
+Objective tollerance: 0.0001  Actual precision: 25908.50499687092
+
+
+******* Iteration-2 *******
+Consecutive iteration without improvement: 0
+Number of redundant population elements:  32
+Objective tollerance: 0.0001  Actual precision: 9526.562637913565
+
+
+******* Iteration-3 *******
+Consecutive iteration without improvement: 3
+Number of redundant population elements:  36
+Objective tollerance: 0.0001  Actual precision: 3277.945182266718
+
+
+******* Iteration-4 *******
+Consecutive iteration without improvement: 0
+Number of redundant population elements:  49
+Objective tollerance: 0.0001  Actual precision: 1214.8629622442947
+
+
+******* Iteration-5 *******
+Consecutive iteration without improvement: 4
+Number of redundant population elements:  63
+Objective tollerance: 0.0001  Actual precision: 248.39619538166068
+
+
+******* Iteration-6 *******
+Consecutive iteration without improvement: 0
+Number of redundant population elements:  74
+Objective tollerance: 0.0001  Actual precision: 34.779020163346615
+
+
+******* Iteration-7 *******
+Consecutive iteration without improvement: 3
+Number of redundant population elements:  87
+Objective tollerance: 0.0001  Actual precision: 4.424359129150844
+
+
+******* Iteration-8 *******
+Consecutive iteration without improvement: 0
+Number of redundant population elements:  95
+Objective tollerance: 0.0001  Actual precision: 0.3669457244826617
+
+
+******* Iteration-9 *******
+Second stopping criterion, population has converged
+
+Best solution is the1-th element of the population
+
+
+Centroids:
+ [[-1.30522624 -0.67515554]
+ [-0.35463228  0.54864637]
+ [ 1.50793746 -0.22011993]
+ [ 0.16423389 -0.70244653]
+ [ 0.38144389  1.87755114]]
+
+Membership Vector:
+ [1 0 0 1 1 2 3 1 3 3 3 0 3 1 2 1 3 1 4 4 3 3 3 2 1 3 3 1 4 0 1 3 1 1 2 1 0
+ 0 1 3 1 1 4 1 0 3 3 2 1 0 1 0 3 3 0 0 1 3 2 3 3 1 3 3 1 1 3 0 2 3 3 3 0 1
+ 0 1 1 2 3 2 4 3 4 3 3 3 3 3 1 1 1 0 2 1 3 3 0 1 3 1 0 3 3 1 1 3 1 4 3 4 1
+ 1 0 1 4 0 3 0 1 3 2 1 4 1 1 3 1 3 0 1 3 3 1 2 0 0 0 3 1 2 1 2 3 3 2 1 2 2
+ 3 3 0 1 3 3 2 2 1 1 4 1 4 3 3 1 3 3 1 4 1 2 1 2 3 4 3 2 3 3 4 3 3 4 1 0 2
+ 2 4 4 1 2 1 3 1 4 2 1 0 1 2 1 3 0 4 1 4 1 1 1 1 1 4 0 4 4 3 4 1 4 3 4 1 1
+ 1 0 3 0 1 1 0 0 3 0 2 2 0 3 2 3 3 0 0 0 0 0 3 1 3 3 3 3 1 0 2 3 1 1 0 0 3
+ 3 1 4 2 3 1 4 1 4 0 3 3 2 1 3 3 3 0 0 3 2 0 3 0 0 2 4 3 3 0 3 3 0 3 0 1 3
+ 0 1 2 3 2 3 3 2 4 2 1 0 3 4 3 4 3 3 3 2 2 1 2 4 4 3 2 0 3 3 3 0 4 0 2 2 2
+ 1 4 3 4 4 1 0 2 2 2 3 4]
+
+MSSC:
+ 206.2724171748938
+******* Starting Particle Swarm Clustering *******
+Datset: bupa.data
+Dataset will be scaled
+Number of clusters: 5
+Tolerance: 0.001
+Size of population: 20
+Fit maximum iteration limit: 5000
+
+
+Head of dataset
+      0     1
+0  85.0  92.0
+1  85.0  64.0
+2  86.0  54.0
+3  91.0  78.0
+4  87.0  70.0
+
+Scaling dataset...
+Head of scaled dataset
+          0         1
+0 -1.161601  1.207923
+1 -1.161601 -0.320373
+2 -0.936459 -0.866193
+3  0.189250  0.443775
+4 -0.711318  0.007119
+
+Shape of dataset:  (345, 2)
+
+******* Initialization *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 47746.966748025516
+
+
+******* Iteration-1 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 12329.968516942276
+
+
+******* Iteration-2 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 19885.06022898933
+
+
+******* Iteration-3 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 14476.730520293306
+
+
+******* Iteration-4 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 14893.998498471263
+
+
+******* Iteration-5 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 17470.871624028005
+
+
+******* Iteration-6 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 14151.308570436926
+
+
+******* Iteration-7 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 11893.466129437837
+
+
+******* Iteration-8 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 11109.493286149978
+
+
+******* Iteration-9 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 14754.15785908494
+
+
+******* Iteration-10 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 15780.643315593363
+
+
+******* Iteration-11 *******
+Consecutive iteration without improvements 4
+Objective tollerance: 0.001  Actual precision: 11174.226785883557
+
+
+******* Iteration-12 *******
+Consecutive iteration without improvements 5
+Objective tollerance: 0.001  Actual precision: 15713.878124812567
+
+
+******* Iteration-13 *******
+Consecutive iteration without improvements 6
+Objective tollerance: 0.001  Actual precision: 15239.264542824425
+
+
+******* Iteration-14 *******
+Consecutive iteration without improvements 7
+Objective tollerance: 0.001  Actual precision: 15628.731955361896
+
+
+******* Iteration-15 *******
+Consecutive iteration without improvements 8
+Objective tollerance: 0.001  Actual precision: 11416.395074869302
+
+
+******* Iteration-16 *******
+Consecutive iteration without improvements 9
+Objective tollerance: 0.001  Actual precision: 13418.809482048076
+
+
+******* Iteration-17 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 10258.820051844981
+
+
+******* Iteration-18 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 16579.55660845102
+
+
+******* Iteration-19 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 16320.837161923824
+
+
+******* Iteration-20 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 8709.004304391234
+
+
+******* Iteration-21 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 10745.785520940135
+
+
+******* Iteration-22 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 11521.162097509177
+
+
+******* Iteration-23 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 12244.761946156526
+
+
+******* Iteration-24 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 14666.741521466838
+
+
+******* Iteration-25 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 14609.55722879702
+
+
+******* Iteration-26 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 17134.529713093165
+
+
+******* Iteration-27 *******
+Consecutive iteration without improvements 4
+Objective tollerance: 0.001  Actual precision: 15364.966683459712
+
+
+******* Iteration-28 *******
+Consecutive iteration without improvements 5
+Objective tollerance: 0.001  Actual precision: 8258.458222725114
+
+
+******* Iteration-29 *******
+Consecutive iteration without improvements 6
+Objective tollerance: 0.001  Actual precision: 11526.144967705593
+
+
+******* Iteration-30 *******
+Consecutive iteration without improvements 7
+Objective tollerance: 0.001  Actual precision: 10997.931429962713
+
+
+******* Iteration-31 *******
+Consecutive iteration without improvements 8
+Objective tollerance: 0.001  Actual precision: 13462.824595447497
+
+
+******* Iteration-32 *******
+Consecutive iteration without improvements 9
+Objective tollerance: 0.001  Actual precision: 8333.596054344902
+
+
+******* Iteration-33 *******
+Consecutive iteration without improvements 10
+Objective tollerance: 0.001  Actual precision: 6006.756549635998
+
+
+******* Iteration-34 *******
+Consecutive iteration without improvements 11
+Objective tollerance: 0.001  Actual precision: 8545.847408622536
+
+
+******* Iteration-35 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7896.629782488963
+
+
+******* Iteration-36 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 8539.532319089454
+
+
+******* Iteration-37 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 7600.129392847076
+
+
+******* Iteration-38 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 5375.830117238472
+
+
+******* Iteration-39 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8006.088095413458
+
+
+******* Iteration-40 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8632.51873713434
+
+
+******* Iteration-41 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 6871.838397142023
+
+
+******* Iteration-42 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 10567.43910179126
+
+
+******* Iteration-43 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 9356.624130891623
+
+
+******* Iteration-44 *******
+Consecutive iteration without improvements 4
+Objective tollerance: 0.001  Actual precision: 7574.156928365976
+
+
+******* Iteration-45 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 10874.028233799836
+
+
+******* Iteration-46 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7522.256429576388
+
+
+******* Iteration-47 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 10898.593446888544
+
+
+******* Iteration-48 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 9491.971972586676
+
+
+******* Iteration-49 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5808.418422090366
+
+
+******* Iteration-50 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 11756.340471600972
+
+
+******* Iteration-51 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7042.047189730183
+
+
+******* Iteration-52 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7991.2880366052195
+
+
+******* Iteration-53 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 13489.299476414239
+
+
+******* Iteration-54 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 6707.307855679352
+
+
+******* Iteration-55 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7478.833820951682
+
+
+******* Iteration-56 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 10019.133842943778
+
+
+******* Iteration-57 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8288.069647688952
+
+
+******* Iteration-58 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 13332.659675991838
+
+
+******* Iteration-59 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8140.092167508844
+
+
+******* Iteration-60 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8372.216063222293
+
+
+******* Iteration-61 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8265.76163376025
+
+
+******* Iteration-62 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7806.041609224203
+
+
+******* Iteration-63 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 9268.42451029251
+
+
+******* Iteration-64 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 6524.93033516385
+
+
+******* Iteration-65 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 9457.50578232733
+
+
+******* Iteration-66 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4013.1402257667546
+
+
+******* Iteration-67 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8513.993625773861
+
+
+******* Iteration-68 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5705.802799151747
+
+
+******* Iteration-69 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5577.662284310572
+
+
+******* Iteration-70 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 6007.0935629298565
+
+
+******* Iteration-71 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7367.2055271469635
+
+
+******* Iteration-72 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5678.7087295640495
+
+
+******* Iteration-73 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4168.379031800212
+
+
+******* Iteration-74 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5451.136107749167
+
+
+******* Iteration-75 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3341.7415559634687
+
+
+******* Iteration-76 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4329.505449346437
+
+
+******* Iteration-77 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3331.9008243819376
+
+
+******* Iteration-78 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3250.3985527627324
+
+
+******* Iteration-79 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2546.957383272287
+
+
+******* Iteration-80 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3998.5349681521707
+
+
+******* Iteration-81 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2803.3337104482325
+
+
+******* Iteration-82 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3919.148957424326
+
+
+******* Iteration-83 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2325.9520864374854
+
+
+******* Iteration-84 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2779.516266251966
+
+
+******* Iteration-85 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3214.0573099334338
+
+
+******* Iteration-86 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2535.349500668327
+
+
+******* Iteration-87 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2038.0466326406824
+
+
+******* Iteration-88 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2209.3608859467254
+
+
+******* Iteration-89 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3663.286924492972
+
+
+******* Iteration-90 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2902.6689280584637
+
+
+******* Iteration-91 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3893.101219030336
+
+
+******* Iteration-92 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3774.577930820682
+
+
+******* Iteration-93 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3292.2135890551353
+
+
+******* Iteration-94 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5983.1543390006955
+
+
+******* Iteration-95 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 6643.664362227049
+
+
+******* Iteration-96 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3804.576800907283
+
+
+******* Iteration-97 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4719.481542125786
+
+
+******* Iteration-98 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 12095.160558942503
+
+
+******* Iteration-99 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5792.002370418947
+
+
+******* Iteration-100 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 10414.931853245362
+
+
+******* Iteration-101 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 8744.062960677093
+
+
+******* Iteration-102 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 11150.514940480116
+
+
+******* Iteration-103 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5916.593299977927
+
+
+******* Iteration-104 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 6634.917248286246
+
+
+******* Iteration-105 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4517.006734408101
+
+
+******* Iteration-106 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7349.647307269024
+
+
+******* Iteration-107 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3835.6660375738093
+
+
+******* Iteration-108 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5887.32519842872
+
+
+******* Iteration-109 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3073.733392636529
+
+
+******* Iteration-110 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 2630.3100347985987
+
+
+******* Iteration-111 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3861.431458291654
+
+
+******* Iteration-112 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 3358.3645620302323
+
+
+******* Iteration-113 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5093.607633285222
+
+
+******* Iteration-114 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 7338.196517018067
+
+
+******* Iteration-115 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5098.938788250012
+
+
+******* Iteration-116 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 4907.133104402197
+
+
+******* Iteration-117 *******
+Consecutive iteration without improvements 0
+Objective tollerance: 0.001  Actual precision: 5537.714547998937
+
+
+******* Iteration-118 *******
+Consecutive iteration without improvements 1
+Objective tollerance: 0.001  Actual precision: 5570.934768056858
+
+
+******* Iteration-119 *******
+Consecutive iteration without improvements 2
+Objective tollerance: 0.001  Actual precision: 5430.223226762811
+
+
+******* Iteration-120 *******
+Consecutive iteration without improvements 3
+Objective tollerance: 0.001  Actual precision: 12203.360256693082
+
+
+******* Iteration-121 *******
+Consecutive iteration without improvements 4
+Objective tollerance: 0.001  Actual precision: 9277.75935442243
+
+
+******* Iteration-122 *******
+Consecutive iteration without improvements 5
+Objective tollerance: 0.001  Actual precision: 7417.311661289213
+
+
+******* Iteration-123 *******
+Consecutive iteration without improvements 6
+Objective tollerance: 0.001  Actual precision: 5423.695060754581
+
+
+******* Iteration-124 *******
+Consecutive iteration without improvements 7
+Objective tollerance: 0.001  Actual precision: 6891.882560775442
+
+
+******* Iteration-125 *******
+Consecutive iteration without improvements 8
+Objective tollerance: 0.001  Actual precision: 4975.962192387559
+
+
+******* Iteration-126 *******
+Consecutive iteration without improvements 9
+Objective tollerance: 0.001  Actual precision: 13892.0294171724
+
+
+******* Iteration-127 *******
+Consecutive iteration without improvements 10
+Objective tollerance: 0.001  Actual precision: 17916.12813846142
+
+
+******* Iteration-128 *******
+Consecutive iteration without improvements 11
+Objective tollerance: 0.001  Actual precision: 6883.82354298461
+
+
+******* Iteration-129 *******
+Consecutive iteration without improvements 12
+Objective tollerance: 0.001  Actual precision: 7049.249449407062
+
+
+******* Iteration-130 *******
+Consecutive iteration without improvements 13
+Objective tollerance: 0.001  Actual precision: 10725.250390637915
+
+
+******* Iteration-131 *******
+Consecutive iteration without improvements 14
+Objective tollerance: 0.001  Actual precision: 13245.856076971564
+
+
+******* Iteration-132 *******
+Consecutive iteration without improvements 15
+Objective tollerance: 0.001  Actual precision: 4932.543299468302
+
+
+******* Iteration-133 *******
+Consecutive iteration without improvements 16
+Objective tollerance: 0.001  Actual precision: 12509.416104151915
+
+
+******* Iteration-134 *******
+Consecutive iteration without improvements 17
+Objective tollerance: 0.001  Actual precision: 7713.982492505698
+
+
+******* Iteration-135 *******
+Consecutive iteration without improvements 18
+Objective tollerance: 0.001  Actual precision: 8644.16489316563
+
+
+******* Iteration-136 *******
+Consecutive iteration without improvements 19
+Objective tollerance: 0.001  Actual precision: 7895.721239021876
+
+
+******* Iteration-137 *******
+Consecutive iteration without improvements 20
+Objective tollerance: 0.001  Actual precision: 8186.837261539744
+
+
+******* Iteration-138 *******
+Consecutive iteration without improvements 21
+Objective tollerance: 0.001  Actual precision: 12946.430648693755
+
+
+******* Iteration-139 *******
+Consecutive iteration without improvements 22
+Objective tollerance: 0.001  Actual precision: 16836.09029884308
+
+
+******* Iteration-140 *******
+Consecutive iteration without improvements 23
+Objective tollerance: 0.001  Actual precision: 9639.076951596922
+
+
+******* Iteration-141 *******
+Consecutive iteration without improvements 24
+Objective tollerance: 0.001  Actual precision: 10476.61251983067
+
+
+******* Iteration-142 *******
+Consecutive iteration without improvements 25
+Objective tollerance: 0.001  Actual precision: 6377.671403055731
+
+
+******* Iteration-143 *******
+Consecutive iteration without improvements 26
+Objective tollerance: 0.001  Actual precision: 14646.278984504783
+
+
+******* Iteration-144 *******
+Consecutive iteration without improvements 27
+Objective tollerance: 0.001  Actual precision: 7459.584347088807
+
+
+******* Iteration-145 *******
+Consecutive iteration without improvements 28
+Objective tollerance: 0.001  Actual precision: 17611.522680132133
+
+
+******* Iteration-146 *******
+Consecutive iteration without improvements 29
+Objective tollerance: 0.001  Actual precision: 10187.99042359512
+
+
+******* Iteration-147 *******
+Consecutive iteration without improvements 30
+Objective tollerance: 0.001  Actual precision: 9119.090815574535
+
+
+******* Iteration-148 *******
+Consecutive iteration without improvements 31
+Objective tollerance: 0.001  Actual precision: 6809.992472715946
+
+
+******* Iteration-149 *******
+Consecutive iteration without improvements 32
+Objective tollerance: 0.001  Actual precision: 12486.10469524469
+
+
+******* Iteration-150 *******
+Consecutive iteration without improvements 33
+Objective tollerance: 0.001  Actual precision: 5184.167245438205
+
+
+******* Iteration-151 *******
+Consecutive iteration without improvements 34
+Objective tollerance: 0.001  Actual precision: 6910.538794610673
+
+
+******* Iteration-152 *******
+Consecutive iteration without improvements 35
+Objective tollerance: 0.001  Actual precision: 11963.358859108186
+
+
+******* Iteration-153 *******
+Consecutive iteration without improvements 36
+Objective tollerance: 0.001  Actual precision: 4193.134257365412
+
+
+******* Iteration-154 *******
+Consecutive iteration without improvements 37
+Objective tollerance: 0.001  Actual precision: 6312.779081046598
+
+
+******* Iteration-155 *******
+Consecutive iteration without improvements 38
+Objective tollerance: 0.001  Actual precision: 8420.307669522035
+
+
+******* Iteration-156 *******
+Consecutive iteration without improvements 39
+Objective tollerance: 0.001  Actual precision: 4327.384268650777
+
+
+******* Iteration-157 *******
+Consecutive iteration without improvements 40
+Objective tollerance: 0.001  Actual precision: 4523.755021467594
+
+
+******* Iteration-158 *******
+Consecutive iteration without improvements 41
+Objective tollerance: 0.001  Actual precision: 8236.43329203579
+
+
+******* Iteration-159 *******
+Consecutive iteration without improvements 42
+Objective tollerance: 0.001  Actual precision: 5123.494568837698
+
+
+******* Iteration-160 *******
+Consecutive iteration without improvements 43
+Objective tollerance: 0.001  Actual precision: 6495.819730316933
+
+
+******* Iteration-161 *******
+Consecutive iteration without improvements 44
+Objective tollerance: 0.001  Actual precision: 5247.768307659367
+
+
+******* Iteration-162 *******
+Consecutive iteration without improvements 45
+Objective tollerance: 0.001  Actual precision: 3716.3088120343846
+
+
+******* Iteration-163 *******
+Consecutive iteration without improvements 46
+Objective tollerance: 0.001  Actual precision: 4553.999999441918
+
+
+******* Iteration-164 *******
+Consecutive iteration without improvements 47
+Objective tollerance: 0.001  Actual precision: 7033.030172707839
+
+
+******* Iteration-165 *******
+Consecutive iteration without improvements 48
+Objective tollerance: 0.001  Actual precision: 4590.6968735526825
+
+
+******* Iteration-166 *******
+Consecutive iteration without improvements 49
+Objective tollerance: 0.001  Actual precision: 3643.36501736964
+
+
+******* Iteration-167 *******
+Consecutive iteration without improvements 50
+Objective tollerance: 0.001  Actual precision: 5965.648500298166
+
+
+******* Iteration-168 *******
+Consecutive iteration without improvements 51
+Objective tollerance: 0.001  Actual precision: 4577.831614901253
+
+
+******* Iteration-169 *******
+Consecutive iteration without improvements 52
+Objective tollerance: 0.001  Actual precision: 5247.175638677552
+
+
+******* Iteration-170 *******
+Consecutive iteration without improvements 53
+Objective tollerance: 0.001  Actual precision: 5685.3816938100435
+
+
+******* Iteration-171 *******
+Consecutive iteration without improvements 54
+Objective tollerance: 0.001  Actual precision: 7266.284113182959
+
+
+******* Iteration-172 *******
+Consecutive iteration without improvements 55
+Objective tollerance: 0.001  Actual precision: 5231.06568918969
+
+
+******* Iteration-173 *******
+Consecutive iteration without improvements 56
+Objective tollerance: 0.001  Actual precision: 5017.3578052778985
+
+
+******* Iteration-174 *******
+Consecutive iteration without improvements 57
+Objective tollerance: 0.001  Actual precision: 8285.839987369698
+
+
+******* Iteration-175 *******
+Consecutive iteration without improvements 58
+Objective tollerance: 0.001  Actual precision: 5822.909145497571
+
+
+******* Iteration-176 *******
+Consecutive iteration without improvements 59
+Objective tollerance: 0.001  Actual precision: 6200.949205509348
+
+
+******* Iteration-177 *******
+Consecutive iteration without improvements 60
+Objective tollerance: 0.001  Actual precision: 5541.530265680917
+
+
+******* Iteration-178 *******
+Consecutive iteration without improvements 61
+Objective tollerance: 0.001  Actual precision: 11021.014827628169
+
+
+******* Iteration-179 *******
+Consecutive iteration without improvements 62
+Objective tollerance: 0.001  Actual precision: 9918.698956923752
+
+
+******* Iteration-180 *******
+Consecutive iteration without improvements 63
+Objective tollerance: 0.001  Actual precision: 4017.317023745573
+
+
+******* Iteration-181 *******
+Consecutive iteration without improvements 64
+Objective tollerance: 0.001  Actual precision: 6471.437271655511
+
+
+******* Iteration-182 *******
+Consecutive iteration without improvements 65
+Objective tollerance: 0.001  Actual precision: 5906.5040854183135
+
+
+******* Iteration-183 *******
+Consecutive iteration without improvements 66
+Objective tollerance: 0.001  Actual precision: 10949.262678468082
+
+
+******* Iteration-184 *******
+Consecutive iteration without improvements 67
+Objective tollerance: 0.001  Actual precision: 3740.8760892912755
+
+
+******* Iteration-185 *******
+Consecutive iteration without improvements 68
+Objective tollerance: 0.001  Actual precision: 6247.738996944902
+
+
+******* Iteration-186 *******
+Consecutive iteration without improvements 69
+Objective tollerance: 0.001  Actual precision: 5235.551744334886
+
+
+******* Iteration-187 *******
+Consecutive iteration without improvements 70
+Objective tollerance: 0.001  Actual precision: 6272.985515979398
+
+
+******* Iteration-188 *******
+Consecutive iteration without improvements 71
+Objective tollerance: 0.001  Actual precision: 5534.682661677648
+
+
+******* Iteration-189 *******
+Consecutive iteration without improvements 72
+Objective tollerance: 0.001  Actual precision: 5100.431246448997
+
+
+******* Iteration-190 *******
+Consecutive iteration without improvements 73
+Objective tollerance: 0.001  Actual precision: 4023.898199844111
+
+
+******* Iteration-191 *******
+Consecutive iteration without improvements 74
+Objective tollerance: 0.001  Actual precision: 2392.0162818310423
+
+
+******* Iteration-192 *******
+Consecutive iteration without improvements 75
+Objective tollerance: 0.001  Actual precision: 13773.199991208401
+
+
+******* Iteration-193 *******
+Consecutive iteration without improvements 76
+Objective tollerance: 0.001  Actual precision: 3680.101379683266
+
+
+******* Iteration-194 *******
+Consecutive iteration without improvements 77
+Objective tollerance: 0.001  Actual precision: 1583.5532941890433
+
+
+******* Iteration-195 *******
+Consecutive iteration without improvements 78
+Objective tollerance: 0.001  Actual precision: 4016.928739771842
+
+
+******* Iteration-196 *******
+Consecutive iteration without improvements 79
+Objective tollerance: 0.001  Actual precision: 2389.0910936357354
+
+
+******* Iteration-197 *******
+Consecutive iteration without improvements 80
+Objective tollerance: 0.001  Actual precision: 6055.401459665042
+
+
+******* Iteration-198 *******
+Consecutive iteration without improvements 81
+Objective tollerance: 0.001  Actual precision: 3401.2345996775134
+
+
+******* Iteration-199 *******
+Consecutive iteration without improvements 82
+Objective tollerance: 0.001  Actual precision: 927.8685367573688
+
+
+******* Iteration-200 *******
+Consecutive iteration without improvements 83
+Objective tollerance: 0.001  Actual precision: 3490.6341252714287
+
+
+******* Iteration-201 *******
+Consecutive iteration without improvements 84
+Objective tollerance: 0.001  Actual precision: 1758.4326135597998
+
+
+******* Iteration-202 *******
+Consecutive iteration without improvements 85
+Objective tollerance: 0.001  Actual precision: 1908.7088631006307
+
+
+******* Iteration-203 *******
+Consecutive iteration without improvements 86
+Objective tollerance: 0.001  Actual precision: 4873.4406764351315
+
+
+******* Iteration-204 *******
+Consecutive iteration without improvements 87
+Objective tollerance: 0.001  Actual precision: 7374.83288078987
+
+
+******* Iteration-205 *******
+Consecutive iteration without improvements 88
+Objective tollerance: 0.001  Actual precision: 2950.5804445855715
+
+
+******* Iteration-206 *******
+Consecutive iteration without improvements 89
+Objective tollerance: 0.001  Actual precision: 3573.527945765431
+
+
+******* Iteration-207 *******
+Consecutive iteration without improvements 90
+Objective tollerance: 0.001  Actual precision: 4955.664884882924
+
+
+******* Iteration-208 *******
+Consecutive iteration without improvements 91
+Objective tollerance: 0.001  Actual precision: 1705.928006151873
+
+
+******* Iteration-209 *******
+Consecutive iteration without improvements 92
+Objective tollerance: 0.001  Actual precision: 3710.936734477936
+
+
+******* Iteration-210 *******
+Consecutive iteration without improvements 93
+Objective tollerance: 0.001  Actual precision: 2646.324993160936
+
+
+******* Iteration-211 *******
+Consecutive iteration without improvements 94
+Objective tollerance: 0.001  Actual precision: 5168.191085259259
+
+
+******* Iteration-212 *******
+Consecutive iteration without improvements 95
+Objective tollerance: 0.001  Actual precision: 4747.315498850851
+
+
+******* Iteration-213 *******
+Consecutive iteration without improvements 96
+Objective tollerance: 0.001  Actual precision: 3767.8805193147587
+
+
+******* Iteration-214 *******
+Consecutive iteration without improvements 97
+Objective tollerance: 0.001  Actual precision: 1438.2733164632764
+
+
+******* Iteration-215 *******
+Consecutive iteration without improvements 98
+Objective tollerance: 0.001  Actual precision: 2057.0045922717272
+
+
+******* Iteration-216 *******
+Consecutive iteration without improvements 99
+Objective tollerance: 0.001  Actual precision: 4273.752201685021
+
+
+******* Iteration-217 *******
+Consecutive iteration without improvements 100
+Objective tollerance: 0.001  Actual precision: 4413.840074353726
+
+
+******* Iteration-218 *******
+Consecutive iteration without improvements 101
+Objective tollerance: 0.001  Actual precision: 2256.623967790674
+
+
+******* Iteration-219 *******
+Consecutive iteration without improvements 102
+Objective tollerance: 0.001  Actual precision: 2175.0513754067633
+
+
+******* Iteration-220 *******
+Consecutive iteration without improvements 103
+Objective tollerance: 0.001  Actual precision: 3851.8375624559603
+
+
+******* Iteration-221 *******
+Consecutive iteration without improvements 104
+Objective tollerance: 0.001  Actual precision: 3419.2663989587313
+
+
+******* Iteration-222 *******
+Consecutive iteration without improvements 105
+Objective tollerance: 0.001  Actual precision: 2430.1175728880985
+
+
+******* Iteration-223 *******
+Consecutive iteration without improvements 106
+Objective tollerance: 0.001  Actual precision: 2398.829979223285
+
+
+******* Iteration-224 *******
+Consecutive iteration without improvements 107
+Objective tollerance: 0.001  Actual precision: 2541.7200215848734
+
+
+******* Iteration-225 *******
+Consecutive iteration without improvements 108
+Objective tollerance: 0.001  Actual precision: 5922.316565151587
+
+
+******* Iteration-226 *******
+Consecutive iteration without improvements 109
+Objective tollerance: 0.001  Actual precision: 2277.9410565988
+
+
+******* Iteration-227 *******
+Consecutive iteration without improvements 110
+Objective tollerance: 0.001  Actual precision: 1322.1022292262892
+
+
+******* Iteration-228 *******
+Consecutive iteration without improvements 111
+Objective tollerance: 0.001  Actual precision: 3443.374057962926
+
+
+******* Iteration-229 *******
+Consecutive iteration without improvements 112
+Objective tollerance: 0.001  Actual precision: 1915.3380155380946
+
+
+******* Iteration-230 *******
+Consecutive iteration without improvements 113
+Objective tollerance: 0.001  Actual precision: 2479.063694291606
+
+
+******* Iteration-231 *******
+Consecutive iteration without improvements 114
+Objective tollerance: 0.001  Actual precision: 1932.8938778213003
+
+
+******* Iteration-232 *******
+Consecutive iteration without improvements 115
+Objective tollerance: 0.001  Actual precision: 1844.4346846771512
+
+
+******* Iteration-233 *******
+Consecutive iteration without improvements 116
+Objective tollerance: 0.001  Actual precision: 3006.519034918741
+
+
+******* Iteration-234 *******
+Consecutive iteration without improvements 117
+Objective tollerance: 0.001  Actual precision: 3070.601770830732
+
+
+******* Iteration-235 *******
+Consecutive iteration without improvements 118
+Objective tollerance: 0.001  Actual precision: 2206.977746204399
+
+
+******* Iteration-236 *******
+Consecutive iteration without improvements 119
+Objective tollerance: 0.001  Actual precision: 1882.092521708625
+
+
+******* Iteration-237 *******
+Consecutive iteration without improvements 120
+Objective tollerance: 0.001  Actual precision: 1943.0528832966324
+
+
+******* Iteration-238 *******
+Consecutive iteration without improvements 121
+Objective tollerance: 0.001  Actual precision: 1263.6062186043482
+
+
+******* Iteration-239 *******
+Consecutive iteration without improvements 122
+Objective tollerance: 0.001  Actual precision: 2121.5419122695816
+
+
+******* Iteration-240 *******
+Consecutive iteration without improvements 123
+Objective tollerance: 0.001  Actual precision: 1945.93857405794
+
+
+******* Iteration-241 *******
+Consecutive iteration without improvements 124
+Objective tollerance: 0.001  Actual precision: 1803.0196141998922
+
+
+******* Iteration-242 *******
+Consecutive iteration without improvements 125
+Objective tollerance: 0.001  Actual precision: 2636.166741883509
+
+
+******* Iteration-243 *******
+Consecutive iteration without improvements 126
+Objective tollerance: 0.001  Actual precision: 2445.053210266668
+
+
+******* Iteration-244 *******
+Consecutive iteration without improvements 127
+Objective tollerance: 0.001  Actual precision: 3935.425127034863
+
+
+******* Iteration-245 *******
+Consecutive iteration without improvements 128
+Objective tollerance: 0.001  Actual precision: 2097.904210706045
+
+
+******* Iteration-246 *******
+Consecutive iteration without improvements 129
+Objective tollerance: 0.001  Actual precision: 1740.1394056618303
+
+
+******* Iteration-247 *******
+Consecutive iteration without improvements 130
+Objective tollerance: 0.001  Actual precision: 2235.3456515881926
+
+
+******* Iteration-248 *******
+Consecutive iteration without improvements 131
+Objective tollerance: 0.001  Actual precision: 3218.8021060748347
+
+
+******* Iteration-249 *******
+Consecutive iteration without improvements 132
+Objective tollerance: 0.001  Actual precision: 2887.936292608497
+
+
+******* Iteration-250 *******
+Consecutive iteration without improvements 133
+Objective tollerance: 0.001  Actual precision: 1830.2782633311447
+
+
+******* Iteration-251 *******
+Consecutive iteration without improvements 134
+Objective tollerance: 0.001  Actual precision: 2543.505655186127
+
+
+******* Iteration-252 *******
+Consecutive iteration without improvements 135
+Objective tollerance: 0.001  Actual precision: 2431.7309862049483
+
+
+******* Iteration-253 *******
+Consecutive iteration without improvements 136
+Objective tollerance: 0.001  Actual precision: 2698.0188626214294
+
+
+******* Iteration-254 *******
+Consecutive iteration without improvements 137
+Objective tollerance: 0.001  Actual precision: 5699.78883058708
+
+
+******* Iteration-255 *******
+Consecutive iteration without improvements 138
+Objective tollerance: 0.001  Actual precision: 4468.866910330944
+
+
+******* Iteration-256 *******
+Consecutive iteration without improvements 139
+Objective tollerance: 0.001  Actual precision: 4433.531726334133
+
+
+******* Iteration-257 *******
+Consecutive iteration without improvements 140
+Objective tollerance: 0.001  Actual precision: 6184.333027057026
+
+
+******* Iteration-258 *******
+Consecutive iteration without improvements 141
+Objective tollerance: 0.001  Actual precision: 3752.282372577534
+
+
+******* Iteration-259 *******
+Consecutive iteration without improvements 142
+Objective tollerance: 0.001  Actual precision: 5374.144294488539
+
+
+******* Iteration-260 *******
+Consecutive iteration without improvements 143
+Objective tollerance: 0.001  Actual precision: 5216.6957589321955
+
+
+******* Iteration-261 *******
+Consecutive iteration without improvements 144
+Objective tollerance: 0.001  Actual precision: 6779.205569266108
+
+
+******* Iteration-262 *******
+Consecutive iteration without improvements 145
+Objective tollerance: 0.001  Actual precision: 2713.9775572882736
+
+
+******* Iteration-263 *******
+Consecutive iteration without improvements 146
+Objective tollerance: 0.001  Actual precision: 3926.391567514722
+
+
+******* Iteration-264 *******
+Consecutive iteration without improvements 147
+Objective tollerance: 0.001  Actual precision: 3909.669315045786
+
+
+******* Iteration-265 *******
+Consecutive iteration without improvements 148
+Objective tollerance: 0.001  Actual precision: 4391.928941484343
+
+
+******* Iteration-266 *******
+Consecutive iteration without improvements 149
+Objective tollerance: 0.001  Actual precision: 2823.206091536762
+
+
+******* Iteration-267 *******
+Consecutive iteration without improvements 150
+Objective tollerance: 0.001  Actual precision: 2981.4442355362794
+
+
+******* Iteration-268 *******
+Consecutive iteration without improvements 151
+Objective tollerance: 0.001  Actual precision: 4641.862847056787
+
+
+******* Iteration-269 *******
+Consecutive iteration without improvements 152
+Objective tollerance: 0.001  Actual precision: 3984.807747458391
+
+
+******* Iteration-270 *******
+Consecutive iteration without improvements 153
+Objective tollerance: 0.001  Actual precision: 2110.355634522671
+
+
+******* Iteration-271 *******
+Consecutive iteration without improvements 154
+Objective tollerance: 0.001  Actual precision: 3178.3008711947678
+
+
+******* Iteration-272 *******
+Consecutive iteration without improvements 155
+Objective tollerance: 0.001  Actual precision: 2510.633293241136
+
+
+******* Iteration-273 *******
+Consecutive iteration without improvements 156
+Objective tollerance: 0.001  Actual precision: 2489.5552542641726
+
+
+******* Iteration-274 *******
+Consecutive iteration without improvements 157
+Objective tollerance: 0.001  Actual precision: 1406.3635827208057
+
+
+******* Iteration-275 *******
+Consecutive iteration without improvements 158
+Objective tollerance: 0.001  Actual precision: 3522.252799485798
+
+
+******* Iteration-276 *******
+Consecutive iteration without improvements 159
+Objective tollerance: 0.001  Actual precision: 2151.5517528791424
+
+
+******* Iteration-277 *******
+Consecutive iteration without improvements 160
+Objective tollerance: 0.001  Actual precision: 2195.651648091875
+
+
+******* Iteration-278 *******
+Consecutive iteration without improvements 161
+Objective tollerance: 0.001  Actual precision: 2515.274420255497
+
+
+******* Iteration-279 *******
+Consecutive iteration without improvements 162
+Objective tollerance: 0.001  Actual precision: 2178.4202194562413
+
+
+******* Iteration-280 *******
+Consecutive iteration without improvements 163
+Objective tollerance: 0.001  Actual precision: 2876.5322503286307
+
+
+******* Iteration-281 *******
+Consecutive iteration without improvements 164
+Objective tollerance: 0.001  Actual precision: 1645.1603165064696
+
+
+******* Iteration-282 *******
+Consecutive iteration without improvements 165
+Objective tollerance: 0.001  Actual precision: 2700.8958226179466
+
+
+******* Iteration-283 *******
+Consecutive iteration without improvements 166
+Objective tollerance: 0.001  Actual precision: 1854.7184282324044
+
+
+******* Iteration-284 *******
+Consecutive iteration without improvements 167
+Objective tollerance: 0.001  Actual precision: 1737.5624981590372
+
+
+******* Iteration-285 *******
+Consecutive iteration without improvements 168
+Objective tollerance: 0.001  Actual precision: 2067.3554981678594
+
+
+******* Iteration-286 *******
+Consecutive iteration without improvements 169
+Objective tollerance: 0.001  Actual precision: 1390.8695547064322
+
+
+******* Iteration-287 *******
+Consecutive iteration without improvements 170
+Objective tollerance: 0.001  Actual precision: 1657.2812837626443
+
+
+******* Iteration-288 *******
+Consecutive iteration without improvements 171
+Objective tollerance: 0.001  Actual precision: 1461.3470087828548
+
+
+******* Iteration-289 *******
+Consecutive iteration without improvements 172
+Objective tollerance: 0.001  Actual precision: 2021.541100593173
+
+
+******* Iteration-290 *******
+Consecutive iteration without improvements 173
+Objective tollerance: 0.001  Actual precision: 1480.5108316542933
+
+
+******* Iteration-291 *******
+Consecutive iteration without improvements 174
+Objective tollerance: 0.001  Actual precision: 797.1398086669828
+
+
+******* Iteration-292 *******
+Consecutive iteration without improvements 175
+Objective tollerance: 0.001  Actual precision: 2926.7680588851167
+
+
+******* Iteration-293 *******
+Consecutive iteration without improvements 176
+Objective tollerance: 0.001  Actual precision: 1879.0812521216055
+
+
+******* Iteration-294 *******
+Consecutive iteration without improvements 177
+Objective tollerance: 0.001  Actual precision: 1962.1363226247643
+
+
+******* Iteration-295 *******
+Consecutive iteration without improvements 178
+Objective tollerance: 0.001  Actual precision: 2750.791049594192
+
+
+******* Iteration-296 *******
+Consecutive iteration without improvements 179
+Objective tollerance: 0.001  Actual precision: 1350.0349576571166
+
+
+******* Iteration-297 *******
+Consecutive iteration without improvements 180
+Objective tollerance: 0.001  Actual precision: 2186.139480341217
+
+
+******* Iteration-298 *******
+Consecutive iteration without improvements 181
+Objective tollerance: 0.001  Actual precision: 3087.062336065095
+
+
+******* Iteration-299 *******
+Consecutive iteration without improvements 182
+Objective tollerance: 0.001  Actual precision: 1780.8227519658597
+
+
+******* Iteration-300 *******
+Consecutive iteration without improvements 183
+Objective tollerance: 0.001  Actual precision: 2401.513063586216
+
+
+******* Iteration-301 *******
+Consecutive iteration without improvements 184
+Objective tollerance: 0.001  Actual precision: 2290.0571141662535
+
+
+******* Iteration-302 *******
+Consecutive iteration without improvements 185
+Objective tollerance: 0.001  Actual precision: 3092.5217738969304
+
+
+******* Iteration-303 *******
+Consecutive iteration without improvements 186
+Objective tollerance: 0.001  Actual precision: 3708.2208766924173
+
+
+******* Iteration-304 *******
+Consecutive iteration without improvements 187
+Objective tollerance: 0.001  Actual precision: 3738.7875842959634
+
+
+******* Iteration-305 *******
+Consecutive iteration without improvements 188
+Objective tollerance: 0.001  Actual precision: 1991.8121794505814
+
+
+******* Iteration-306 *******
+Consecutive iteration without improvements 189
+Objective tollerance: 0.001  Actual precision: 1229.7463388875954
+
+
+******* Iteration-307 *******
+Consecutive iteration without improvements 190
+Objective tollerance: 0.001  Actual precision: 2432.729732888118
+
+
+******* Iteration-308 *******
+Consecutive iteration without improvements 191
+Objective tollerance: 0.001  Actual precision: 2223.5804967811173
+
+
+******* Iteration-309 *******
+Consecutive iteration without improvements 192
+Objective tollerance: 0.001  Actual precision: 2274.3602646718355
+
+
+******* Iteration-310 *******
+Consecutive iteration without improvements 193
+Objective tollerance: 0.001  Actual precision: 1540.0467362995487
+
+
+******* Iteration-311 *******
+Consecutive iteration without improvements 194
+Objective tollerance: 0.001  Actual precision: 2102.8889457359323
+
+
+******* Iteration-312 *******
+Consecutive iteration without improvements 195
+Objective tollerance: 0.001  Actual precision: 3704.996579880786
+
+
+******* Iteration-313 *******
+Consecutive iteration without improvements 196
+Objective tollerance: 0.001  Actual precision: 4048.0259941491727
+
+
+******* Iteration-314 *******
+Consecutive iteration without improvements 197
+Objective tollerance: 0.001  Actual precision: 3249.005483237914
+
+
+******* Iteration-315 *******
+Consecutive iteration without improvements 198
+Objective tollerance: 0.001  Actual precision: 1771.2130128597921
+
+
+******* Iteration-316 *******
+Consecutive iteration without improvements 199
+Objective tollerance: 0.001  Actual precision: 3675.8830108920347
+
+
+******* Iteration-317 *******
+Consecutive iteration without improvements 200
+Objective tollerance: 0.001  Actual precision: 2593.8543191177732
+
+
+******* Iteration-318 *******
+Consecutive iteration without improvements 201
+Objective tollerance: 0.001  Actual precision: 3150.9477371079106
+
+
+******* Iteration-319 *******
+Consecutive iteration without improvements 202
+Objective tollerance: 0.001  Actual precision: 2402.59904017368
+
+
+******* Iteration-320 *******
+Consecutive iteration without improvements 203
+Objective tollerance: 0.001  Actual precision: 1066.1716048432347
+
+
+******* Iteration-321 *******
+Consecutive iteration without improvements 204
+Objective tollerance: 0.001  Actual precision: 1908.1691567307637
+
+
+******* Iteration-322 *******
+Consecutive iteration without improvements 205
+Objective tollerance: 0.001  Actual precision: 2136.4547092130774
+
+
+******* Iteration-323 *******
+Consecutive iteration without improvements 206
+Objective tollerance: 0.001  Actual precision: 1251.069321894741
+
+
+******* Iteration-324 *******
+Consecutive iteration without improvements 207
+Objective tollerance: 0.001  Actual precision: 1423.7354126691987
+
+
+******* Iteration-325 *******
+Consecutive iteration without improvements 208
+Objective tollerance: 0.001  Actual precision: 1666.1953710350986
+
+
+******* Iteration-326 *******
+Consecutive iteration without improvements 209
+Objective tollerance: 0.001  Actual precision: 2479.766827591617
+
+
+******* Iteration-327 *******
+Consecutive iteration without improvements 210
+Objective tollerance: 0.001  Actual precision: 3567.952568541521
+
+
+******* Iteration-328 *******
+Consecutive iteration without improvements 211
+Objective tollerance: 0.001  Actual precision: 1575.1517611701654
+
+
+******* Iteration-329 *******
+Consecutive iteration without improvements 212
+Objective tollerance: 0.001  Actual precision: 1765.5061317665863
+
+
+******* Iteration-330 *******
+Consecutive iteration without improvements 213
+Objective tollerance: 0.001  Actual precision: 2068.8832738927827
+
+
+******* Iteration-331 *******
+Consecutive iteration without improvements 214
+Objective tollerance: 0.001  Actual precision: 3220.977389867876
+
+
+******* Iteration-332 *******
+Consecutive iteration without improvements 215
+Objective tollerance: 0.001  Actual precision: 2244.699981920959
+
+
+******* Iteration-333 *******
+Consecutive iteration without improvements 216
+Objective tollerance: 0.001  Actual precision: 3780.1180295065
+
+
+******* Iteration-334 *******
+Consecutive iteration without improvements 217
+Objective tollerance: 0.001  Actual precision: 2369.130068127426
+
+
+******* Iteration-335 *******
+Consecutive iteration without improvements 218
+Objective tollerance: 0.001  Actual precision: 1317.9095941403725
+
+
+******* Iteration-336 *******
+Consecutive iteration without improvements 219
+Objective tollerance: 0.001  Actual precision: 2311.234758896705
+
+
+******* Iteration-337 *******
+Consecutive iteration without improvements 220
+Objective tollerance: 0.001  Actual precision: 2768.999658974999
+
+
+******* Iteration-338 *******
+Consecutive iteration without improvements 221
+Objective tollerance: 0.001  Actual precision: 1171.7775226720962
+
+
+******* Iteration-339 *******
+Consecutive iteration without improvements 222
+Objective tollerance: 0.001  Actual precision: 3690.7582302480437
+
+
+******* Iteration-340 *******
+Consecutive iteration without improvements 223
+Objective tollerance: 0.001  Actual precision: 1573.4034998672864
+
+
+******* Iteration-341 *******
+Consecutive iteration without improvements 224
+Objective tollerance: 0.001  Actual precision: 3848.9051009246973
+
+
+******* Iteration-342 *******
+Consecutive iteration without improvements 225
+Objective tollerance: 0.001  Actual precision: 6366.657421770448
+
+
+******* Iteration-343 *******
+Consecutive iteration without improvements 226
+Objective tollerance: 0.001  Actual precision: 2196.0846676558604
+
+
+******* Iteration-344 *******
+Consecutive iteration without improvements 227
+Objective tollerance: 0.001  Actual precision: 2769.3523741234035
+
+
+******* Iteration-345 *******
+Consecutive iteration without improvements 228
+Objective tollerance: 0.001  Actual precision: 2260.9929278148893
+
+
+******* Iteration-346 *******
+Consecutive iteration without improvements 229
+Objective tollerance: 0.001  Actual precision: 3652.227787793084
+
+
+******* Iteration-347 *******
+Consecutive iteration without improvements 230
+Objective tollerance: 0.001  Actual precision: 3400.4427525327974
+
+
+******* Iteration-348 *******
+Consecutive iteration without improvements 231
+Objective tollerance: 0.001  Actual precision: 2135.41867435725
+
+
+******* Iteration-349 *******
+Consecutive iteration without improvements 232
+Objective tollerance: 0.001  Actual precision: 1898.8758682526113
+
+
+******* Iteration-350 *******
+Consecutive iteration without improvements 233
+Objective tollerance: 0.001  Actual precision: 3201.2548463915027
+
+
+******* Iteration-351 *******
+Consecutive iteration without improvements 234
+Objective tollerance: 0.001  Actual precision: 4751.162145586616
+
+
+******* Iteration-352 *******
+Consecutive iteration without improvements 235
+Objective tollerance: 0.001  Actual precision: 2103.949476715901
+
+
+******* Iteration-353 *******
+Consecutive iteration without improvements 236
+Objective tollerance: 0.001  Actual precision: 2385.8564160209835
+
+
+******* Iteration-354 *******
+Consecutive iteration without improvements 237
+Objective tollerance: 0.001  Actual precision: 2094.5416558466986
+
+
+******* Iteration-355 *******
+Consecutive iteration without improvements 238
+Objective tollerance: 0.001  Actual precision: 3244.005685250461
+
+
+******* Iteration-356 *******
+Consecutive iteration without improvements 239
+Objective tollerance: 0.001  Actual precision: 3927.5829609961875
+
+
+******* Iteration-357 *******
+Consecutive iteration without improvements 240
+Objective tollerance: 0.001  Actual precision: 8678.272841077529
+
+
+******* Iteration-358 *******
+Consecutive iteration without improvements 241
+Objective tollerance: 0.001  Actual precision: 1514.5472218114712
+
+
+******* Iteration-359 *******
+Consecutive iteration without improvements 242
+Objective tollerance: 0.001  Actual precision: 6205.406387210321
+
+
+******* Iteration-360 *******
+Consecutive iteration without improvements 243
+Objective tollerance: 0.001  Actual precision: 2539.8148307014208
+
+
+******* Iteration-361 *******
+Consecutive iteration without improvements 244
+Objective tollerance: 0.001  Actual precision: 2123.6509591914414
+
+
+******* Iteration-362 *******
+Consecutive iteration without improvements 245
+Objective tollerance: 0.001  Actual precision: 2167.4854449130994
+
+
+******* Iteration-363 *******
+Consecutive iteration without improvements 246
+Objective tollerance: 0.001  Actual precision: 1743.0897468424782
+
+
+******* Iteration-364 *******
+Consecutive iteration without improvements 247
+Objective tollerance: 0.001  Actual precision: 1469.9024424397305
+
+
+******* Iteration-365 *******
+Consecutive iteration without improvements 248
+Objective tollerance: 0.001  Actual precision: 6139.396931839642
+
+
+******* Iteration-366 *******
+Consecutive iteration without improvements 249
+Objective tollerance: 0.001  Actual precision: 1590.476256959724
+
+
+******* Iteration-367 *******
+Consecutive iteration without improvements 250
+Objective tollerance: 0.001  Actual precision: 1873.4590059460447
+
+
+******* Iteration-368 *******
+Consecutive iteration without improvements 251
+Objective tollerance: 0.001  Actual precision: 2644.064543149918
+
+
+******* Iteration-369 *******
+Consecutive iteration without improvements 252
+Objective tollerance: 0.001  Actual precision: 1142.2726557340045
+
+
+******* Iteration-370 *******
+Consecutive iteration without improvements 253
+Objective tollerance: 0.001  Actual precision: 1639.391378957818
+
+
+******* Iteration-371 *******
+Consecutive iteration without improvements 254
+Objective tollerance: 0.001  Actual precision: 859.8574478030342
+
+
+******* Iteration-372 *******
+Consecutive iteration without improvements 255
+Objective tollerance: 0.001  Actual precision: 2214.447798563807
+
+
+******* Iteration-373 *******
+Consecutive iteration without improvements 256
+Objective tollerance: 0.001  Actual precision: 1441.0647412597878
+
+
+******* Iteration-374 *******
+Consecutive iteration without improvements 257
+Objective tollerance: 0.001  Actual precision: 997.9942614598817
+
+
+******* Iteration-375 *******
+Consecutive iteration without improvements 258
+Objective tollerance: 0.001  Actual precision: 640.114677276045
+
+
+******* Iteration-376 *******
+Consecutive iteration without improvements 259
+Objective tollerance: 0.001  Actual precision: 827.4389946895311
+
+
+******* Iteration-377 *******
+Consecutive iteration without improvements 260
+Objective tollerance: 0.001  Actual precision: 1011.2471959227204
+
+
+******* Iteration-378 *******
+Consecutive iteration without improvements 261
+Objective tollerance: 0.001  Actual precision: 877.8501597975854
+
+
+******* Iteration-379 *******
+Consecutive iteration without improvements 262
+Objective tollerance: 0.001  Actual precision: 879.4310947655118
+
+
+******* Iteration-380 *******
+Consecutive iteration without improvements 263
+Objective tollerance: 0.001  Actual precision: 842.9679356047632
+
+
+******* Iteration-381 *******
+Consecutive iteration without improvements 264
+Objective tollerance: 0.001  Actual precision: 685.6634139822509
+
+
+******* Iteration-382 *******
+Consecutive iteration without improvements 265
+Objective tollerance: 0.001  Actual precision: 450.87065858068
+
+
+******* Iteration-383 *******
+Consecutive iteration without improvements 266
+Objective tollerance: 0.001  Actual precision: 418.350870188048
+
+
+******* Iteration-384 *******
+Consecutive iteration without improvements 267
+Objective tollerance: 0.001  Actual precision: 860.6606207887472
+
+
+******* Iteration-385 *******
+Consecutive iteration without improvements 268
+Objective tollerance: 0.001  Actual precision: 1340.8215584440843
+
+
+******* Iteration-386 *******
+Consecutive iteration without improvements 269
+Objective tollerance: 0.001  Actual precision: 834.4661221142708
+
+
+******* Iteration-387 *******
+Consecutive iteration without improvements 270
+Objective tollerance: 0.001  Actual precision: 1586.8104224097128
+
+
+******* Iteration-388 *******
+Consecutive iteration without improvements 271
+Objective tollerance: 0.001  Actual precision: 1739.2977600895838
+
+
+******* Iteration-389 *******
+Consecutive iteration without improvements 272
+Objective tollerance: 0.001  Actual precision: 833.4889126919256
+
+
+******* Iteration-390 *******
+Consecutive iteration without improvements 273
+Objective tollerance: 0.001  Actual precision: 2963.9537233926617
+
+
+******* Iteration-391 *******
+Consecutive iteration without improvements 274
+Objective tollerance: 0.001  Actual precision: 4196.269732924774
+
+
+******* Iteration-392 *******
+Consecutive iteration without improvements 275
+Objective tollerance: 0.001  Actual precision: 1364.6352525468737
+
+
+******* Iteration-393 *******
+Consecutive iteration without improvements 276
+Objective tollerance: 0.001  Actual precision: 2004.0864241031654
+
+
+******* Iteration-394 *******
+Consecutive iteration without improvements 277
+Objective tollerance: 0.001  Actual precision: 2520.3841895735754
+
+
+******* Iteration-395 *******
+Consecutive iteration without improvements 278
+Objective tollerance: 0.001  Actual precision: 2469.2712425685586
+
+
+******* Iteration-396 *******
+Consecutive iteration without improvements 279
+Objective tollerance: 0.001  Actual precision: 3232.7078057224835
+
+
+******* Iteration-397 *******
+Consecutive iteration without improvements 280
+Objective tollerance: 0.001  Actual precision: 4743.496881103018
+
+
+******* Iteration-398 *******
+Consecutive iteration without improvements 281
+Objective tollerance: 0.001  Actual precision: 4673.815984431556
+
+
+******* Iteration-399 *******
+Consecutive iteration without improvements 282
+Objective tollerance: 0.001  Actual precision: 3166.939276985566
+
+
+******* Iteration-400 *******
+Consecutive iteration without improvements 283
+Objective tollerance: 0.001  Actual precision: 2619.1618458751145
+
+
+******* Iteration-401 *******
+Consecutive iteration without improvements 284
+Objective tollerance: 0.001  Actual precision: 4101.408884068167
+
+
+******* Iteration-402 *******
+Consecutive iteration without improvements 285
+Objective tollerance: 0.001  Actual precision: 5157.738011264485
+
+
+******* Iteration-403 *******
+Consecutive iteration without improvements 286
+Objective tollerance: 0.001  Actual precision: 4820.967360145594
+
+
+******* Iteration-404 *******
+Consecutive iteration without improvements 287
+Objective tollerance: 0.001  Actual precision: 3350.799944161395
+
+
+******* Iteration-405 *******
+Consecutive iteration without improvements 288
+Objective tollerance: 0.001  Actual precision: 5592.589695229659
+
+
+******* Iteration-406 *******
+Consecutive iteration without improvements 289
+Objective tollerance: 0.001  Actual precision: 3677.74940229037
+
+
+******* Iteration-407 *******
+Consecutive iteration without improvements 290
+Objective tollerance: 0.001  Actual precision: 4457.798308658002
+
+
+******* Iteration-408 *******
+Consecutive iteration without improvements 291
+Objective tollerance: 0.001  Actual precision: 4020.5467013450693
+
+
+******* Iteration-409 *******
+Consecutive iteration without improvements 292
+Objective tollerance: 0.001  Actual precision: 3421.789741116161
+
+
+******* Iteration-410 *******
+Consecutive iteration without improvements 293
+Objective tollerance: 0.001  Actual precision: 7042.777368553777
+
+
+******* Iteration-411 *******
+Consecutive iteration without improvements 294
+Objective tollerance: 0.001  Actual precision: 4572.054581036292
+
+
+******* Iteration-412 *******
+Consecutive iteration without improvements 295
+Objective tollerance: 0.001  Actual precision: 2728.7173196038816
+
+
+******* Iteration-413 *******
+Consecutive iteration without improvements 296
+Objective tollerance: 0.001  Actual precision: 2957.9379897716153
+
+
+******* Iteration-414 *******
+Consecutive iteration without improvements 297
+Objective tollerance: 0.001  Actual precision: 2463.6185272660123
+
+
+******* Iteration-415 *******
+Consecutive iteration without improvements 298
+Objective tollerance: 0.001  Actual precision: 1955.9496034556657
+
+
+******* Iteration-416 *******
+Consecutive iteration without improvements 299
+Objective tollerance: 0.001  Actual precision: 2945.5999392550652
+
+
+******* Iteration-417 *******
+Consecutive iteration without improvements 300
+Objective tollerance: 0.001  Actual precision: 3266.6244718963617
+
+
+******* Iteration-418 *******
+Consecutive iteration without improvements 301
+Objective tollerance: 0.001  Actual precision: 3499.6247836043935
+
+
+******* Iteration-419 *******
+Consecutive iteration without improvements 302
+Objective tollerance: 0.001  Actual precision: 5744.207965842185
+
+
+******* Iteration-420 *******
+Consecutive iteration without improvements 303
+Objective tollerance: 0.001  Actual precision: 3615.320880106628
+
+
+******* Iteration-421 *******
+Consecutive iteration without improvements 304
+Objective tollerance: 0.001  Actual precision: 3540.690411277975
+
+
+******* Iteration-422 *******
+Consecutive iteration without improvements 305
+Objective tollerance: 0.001  Actual precision: 2822.1390074182564
+
+
+******* Iteration-423 *******
+Consecutive iteration without improvements 306
+Objective tollerance: 0.001  Actual precision: 3931.3725829453897
+
+
+******* Iteration-424 *******
+Consecutive iteration without improvements 307
+Objective tollerance: 0.001  Actual precision: 1988.92010636992
+
+
+******* Iteration-425 *******
+Consecutive iteration without improvements 308
+Objective tollerance: 0.001  Actual precision: 3726.001102420256
+
+
+******* Iteration-426 *******
+Consecutive iteration without improvements 309
+Objective tollerance: 0.001  Actual precision: 6401.414035939749
+
+
+******* Iteration-427 *******
+Consecutive iteration without improvements 310
+Objective tollerance: 0.001  Actual precision: 5648.116681615332
+
+
+******* Iteration-428 *******
+Consecutive iteration without improvements 311
+Objective tollerance: 0.001  Actual precision: 3024.578932784464
+
+
+******* Iteration-429 *******
+Consecutive iteration without improvements 312
+Objective tollerance: 0.001  Actual precision: 4480.928553332843
+
+
+******* Iteration-430 *******
+Consecutive iteration without improvements 313
+Objective tollerance: 0.001  Actual precision: 4451.554230710937
+
+
+******* Iteration-431 *******
+Consecutive iteration without improvements 314
+Objective tollerance: 0.001  Actual precision: 2969.214482124464
+
+
+******* Iteration-432 *******
+Consecutive iteration without improvements 315
+Objective tollerance: 0.001  Actual precision: 3806.9197184166674
+
+
+******* Iteration-433 *******
+Consecutive iteration without improvements 316
+Objective tollerance: 0.001  Actual precision: 5226.5778410050925
+
+
+******* Iteration-434 *******
+Consecutive iteration without improvements 317
+Objective tollerance: 0.001  Actual precision: 4109.024163835815
+
+
+******* Iteration-435 *******
+Consecutive iteration without improvements 318
+Objective tollerance: 0.001  Actual precision: 3936.0649085497867
+
+
+******* Iteration-436 *******
+Consecutive iteration without improvements 319
+Objective tollerance: 0.001  Actual precision: 1565.7514090534353
+
+
+******* Iteration-437 *******
+Consecutive iteration without improvements 320
+Objective tollerance: 0.001  Actual precision: 4106.183138845173
+
+
+******* Iteration-438 *******
+Consecutive iteration without improvements 321
+Objective tollerance: 0.001  Actual precision: 3680.762518003733
+
+
+******* Iteration-439 *******
+Consecutive iteration without improvements 322
+Objective tollerance: 0.001  Actual precision: 4069.6606584337997
+
+
+******* Iteration-440 *******
+Consecutive iteration without improvements 323
+Objective tollerance: 0.001  Actual precision: 6028.455072005273
+
+
+******* Iteration-441 *******
+Consecutive iteration without improvements 324
+Objective tollerance: 0.001  Actual precision: 2784.762100043895
+
+
+******* Iteration-442 *******
+Consecutive iteration without improvements 325
+Objective tollerance: 0.001  Actual precision: 4686.438804691679
+
+
+******* Iteration-443 *******
+Consecutive iteration without improvements 326
+Objective tollerance: 0.001  Actual precision: 2842.7436867825436
+
+
+******* Iteration-444 *******
+Consecutive iteration without improvements 327
+Objective tollerance: 0.001  Actual precision: 2176.741921836694
+
+
+******* Iteration-445 *******
+Consecutive iteration without improvements 328
+Objective tollerance: 0.001  Actual precision: 2004.315879782219
+
+
+******* Iteration-446 *******
+Consecutive iteration without improvements 329
+Objective tollerance: 0.001  Actual precision: 2688.77867952189
+
+
+******* Iteration-447 *******
+Consecutive iteration without improvements 330
+Objective tollerance: 0.001  Actual precision: 2542.9692808034283
+
+
+******* Iteration-448 *******
+Consecutive iteration without improvements 331
+Objective tollerance: 0.001  Actual precision: 1745.736710851571
+
+
+******* Iteration-449 *******
+Consecutive iteration without improvements 332
+Objective tollerance: 0.001  Actual precision: 2557.902440841731
+
+
+******* Iteration-450 *******
+Consecutive iteration without improvements 333
+Objective tollerance: 0.001  Actual precision: 1897.1838319210735
+
+
+******* Iteration-451 *******
+Consecutive iteration without improvements 334
+Objective tollerance: 0.001  Actual precision: 4155.750618754992
+
+
+******* Iteration-452 *******
+Consecutive iteration without improvements 335
+Objective tollerance: 0.001  Actual precision: 3178.296460754931
+
+
+******* Iteration-453 *******
+Consecutive iteration without improvements 336
+Objective tollerance: 0.001  Actual precision: 2421.0311207980067
+
+
+******* Iteration-454 *******
+Consecutive iteration without improvements 337
+Objective tollerance: 0.001  Actual precision: 3143.672269902488
+
+
+******* Iteration-455 *******
+Consecutive iteration without improvements 338
+Objective tollerance: 0.001  Actual precision: 1480.546222630738
+
+
+******* Iteration-456 *******
+Consecutive iteration without improvements 339
+Objective tollerance: 0.001  Actual precision: 2038.1784011546092
+
+
+******* Iteration-457 *******
+Consecutive iteration without improvements 340
+Objective tollerance: 0.001  Actual precision: 2168.499779982653
+
+
+******* Iteration-458 *******
+Consecutive iteration without improvements 341
+Objective tollerance: 0.001  Actual precision: 1885.8875355224638
+
+
+******* Iteration-459 *******
+Consecutive iteration without improvements 342
+Objective tollerance: 0.001  Actual precision: 1447.0727811859165
+
+
+******* Iteration-460 *******
+Consecutive iteration without improvements 343
+Objective tollerance: 0.001  Actual precision: 758.9771573799943
+
+
+******* Iteration-461 *******
+Consecutive iteration without improvements 344
+Objective tollerance: 0.001  Actual precision: 1801.783848848613
+
+
+******* Iteration-462 *******
+Consecutive iteration without improvements 345
+Objective tollerance: 0.001  Actual precision: 766.1880414057648
+
+
+******* Iteration-463 *******
+Consecutive iteration without improvements 346
+Objective tollerance: 0.001  Actual precision: 1178.6923051012839
+
+
+******* Iteration-464 *******
+Consecutive iteration without improvements 347
+Objective tollerance: 0.001  Actual precision: 856.0564648452464
+
+
+******* Iteration-465 *******
+Consecutive iteration without improvements 348
+Objective tollerance: 0.001  Actual precision: 1524.760228866673
+
+
+******* Iteration-466 *******
+Consecutive iteration without improvements 349
+Objective tollerance: 0.001  Actual precision: 1057.1750054902661
+
+
+******* Iteration-467 *******
+Consecutive iteration without improvements 350
+Objective tollerance: 0.001  Actual precision: 1152.8061811415043
+
+
+******* Iteration-468 *******
+Consecutive iteration without improvements 351
+Objective tollerance: 0.001  Actual precision: 577.6299644784574
+
+
+******* Iteration-469 *******
+Consecutive iteration without improvements 352
+Objective tollerance: 0.001  Actual precision: 909.2623318559758
+
+
+******* Iteration-470 *******
+Consecutive iteration without improvements 353
+Objective tollerance: 0.001  Actual precision: 602.1348092298499
+
+
+******* Iteration-471 *******
+Consecutive iteration without improvements 354
+Objective tollerance: 0.001  Actual precision: 677.5150871608685
+
+
+******* Iteration-472 *******
+Consecutive iteration without improvements 355
+Objective tollerance: 0.001  Actual precision: 768.5150822984149
+
+
+******* Iteration-473 *******
+Consecutive iteration without improvements 356
+Objective tollerance: 0.001  Actual precision: 1021.4377092348899
+
+
+******* Iteration-474 *******
+Consecutive iteration without improvements 357
+Objective tollerance: 0.001  Actual precision: 970.1974749314842
+
+
+******* Iteration-475 *******
+Consecutive iteration without improvements 358
+Objective tollerance: 0.001  Actual precision: 718.9186911647107
+
+
+******* Iteration-476 *******
+Consecutive iteration without improvements 359
+Objective tollerance: 0.001  Actual precision: 2726.0061079871803
+
+
+******* Iteration-477 *******
+Consecutive iteration without improvements 360
+Objective tollerance: 0.001  Actual precision: 1688.1178291561232
+
+
+******* Iteration-478 *******
+Consecutive iteration without improvements 361
+Objective tollerance: 0.001  Actual precision: 6969.431371925211
+
+
+******* Iteration-479 *******
+Consecutive iteration without improvements 362
+Objective tollerance: 0.001  Actual precision: 1235.8009571711837
+
+
+******* Iteration-480 *******
+Consecutive iteration without improvements 363
+Objective tollerance: 0.001  Actual precision: 5281.4396878378075
+
+
+******* Iteration-481 *******
+Consecutive iteration without improvements 364
+Objective tollerance: 0.001  Actual precision: 2791.145290900032
+
+
+******* Iteration-482 *******
+Consecutive iteration without improvements 365
+Objective tollerance: 0.001  Actual precision: 3788.0006370105257
+
+
+******* Iteration-483 *******
+Consecutive iteration without improvements 366
+Objective tollerance: 0.001  Actual precision: 2566.716792482786
+
+
+******* Iteration-484 *******
+Consecutive iteration without improvements 367
+Objective tollerance: 0.001  Actual precision: 1702.8834628959708
+
+
+******* Iteration-485 *******
+Consecutive iteration without improvements 368
+Objective tollerance: 0.001  Actual precision: 2773.105923369498
+
+
+******* Iteration-486 *******
+Consecutive iteration without improvements 369
+Objective tollerance: 0.001  Actual precision: 2184.320686932918
+
+
+******* Iteration-487 *******
+Consecutive iteration without improvements 370
+Objective tollerance: 0.001  Actual precision: 1961.7251510630454
+
+
+******* Iteration-488 *******
+Consecutive iteration without improvements 371
+Objective tollerance: 0.001  Actual precision: 3443.712110176596
+
+
+******* Iteration-489 *******
+Consecutive iteration without improvements 372
+Objective tollerance: 0.001  Actual precision: 1856.039111816489
+
+
+******* Iteration-490 *******
+Consecutive iteration without improvements 373
+Objective tollerance: 0.001  Actual precision: 1167.3482895837865
+
+
+******* Iteration-491 *******
+Consecutive iteration without improvements 374
+Objective tollerance: 0.001  Actual precision: 3822.806988547705
+
+
+******* Iteration-492 *******
+Consecutive iteration without improvements 375
+Objective tollerance: 0.001  Actual precision: 1362.6410322771976
+
+
+******* Iteration-493 *******
+Consecutive iteration without improvements 376
+Objective tollerance: 0.001  Actual precision: 3381.7179068542086
+
+
+******* Iteration-494 *******
+Consecutive iteration without improvements 377
+Objective tollerance: 0.001  Actual precision: 1117.3129812274644
+
+
+******* Iteration-495 *******
+Consecutive iteration without improvements 378
+Objective tollerance: 0.001  Actual precision: 1518.4161118206268
+
+
+******* Iteration-496 *******
+Consecutive iteration without improvements 379
+Objective tollerance: 0.001  Actual precision: 1180.288111227513
+
+
+******* Iteration-497 *******
+Consecutive iteration without improvements 380
+Objective tollerance: 0.001  Actual precision: 842.0510487010606
+
+
+******* Iteration-498 *******
+Consecutive iteration without improvements 381
+Objective tollerance: 0.001  Actual precision: 519.0240789110978
+
+
+******* Iteration-499 *******
+Consecutive iteration without improvements 382
+Objective tollerance: 0.001  Actual precision: 686.0961404248083
+
+
+******* Iteration-500 *******
+Consecutive iteration without improvements 383
+Objective tollerance: 0.001  Actual precision: 933.8401743357724
+
+
+******* Iteration-501 *******
+Consecutive iteration without improvements 384
+Objective tollerance: 0.001  Actual precision: 664.5744036225711
+
+
+******* Iteration-502 *******
+Consecutive iteration without improvements 385
+Objective tollerance: 0.001  Actual precision: 642.9482377466389
+
+
+******* Iteration-503 *******
+Consecutive iteration without improvements 386
+Objective tollerance: 0.001  Actual precision: 1321.6956191771353
+
+
+******* Iteration-504 *******
+Consecutive iteration without improvements 387
+Objective tollerance: 0.001  Actual precision: 1577.6568913816618
+
+
+******* Iteration-505 *******
+Consecutive iteration without improvements 388
+Objective tollerance: 0.001  Actual precision: 1509.5825910874985
+
+
+******* Iteration-506 *******
+Consecutive iteration without improvements 389
+Objective tollerance: 0.001  Actual precision: 2037.0752726797566
+
+
+******* Iteration-507 *******
+Consecutive iteration without improvements 390
+Objective tollerance: 0.001  Actual precision: 1466.8916391478012
+
+
+******* Iteration-508 *******
+Consecutive iteration without improvements 391
+Objective tollerance: 0.001  Actual precision: 2265.11395904724
+
+
+******* Iteration-509 *******
+Consecutive iteration without improvements 392
+Objective tollerance: 0.001  Actual precision: 1970.9684679482352
+
+
+******* Iteration-510 *******
+Consecutive iteration without improvements 393
+Objective tollerance: 0.001  Actual precision: 2033.5555735205742
+
+
+******* Iteration-511 *******
+Consecutive iteration without improvements 394
+Objective tollerance: 0.001  Actual precision: 1170.6309552196915
+
+
+******* Iteration-512 *******
+Consecutive iteration without improvements 395
+Objective tollerance: 0.001  Actual precision: 1591.4756287551647
+
+
+******* Iteration-513 *******
+Consecutive iteration without improvements 396
+Objective tollerance: 0.001  Actual precision: 1588.7635041192098
+
+
+******* Iteration-514 *******
+Consecutive iteration without improvements 397
+Objective tollerance: 0.001  Actual precision: 2111.833875251258
+
+
+******* Iteration-515 *******
+Consecutive iteration without improvements 398
+Objective tollerance: 0.001  Actual precision: 1640.6616645348047
+
+
+******* Iteration-516 *******
+Consecutive iteration without improvements 399
+Objective tollerance: 0.001  Actual precision: 1774.285328665937
+
+
+******* Iteration-517 *******
+Consecutive iteration without improvements 400
+Objective tollerance: 0.001  Actual precision: 1245.5645856291196
+
+
+******* Iteration-518 *******
+Consecutive iteration without improvements 401
+Objective tollerance: 0.001  Actual precision: 1995.1499521845926
+
+
+******* Iteration-519 *******
+Consecutive iteration without improvements 402
+Objective tollerance: 0.001  Actual precision: 1193.4061607059912
+
+
+******* Iteration-520 *******
+Consecutive iteration without improvements 403
+Objective tollerance: 0.001  Actual precision: 1218.459816639544
+
+
+******* Iteration-521 *******
+Consecutive iteration without improvements 404
+Objective tollerance: 0.001  Actual precision: 1762.7483468588964
+
+
+******* Iteration-522 *******
+Consecutive iteration without improvements 405
+Objective tollerance: 0.001  Actual precision: 2076.8337595212697
+
+
+******* Iteration-523 *******
+Consecutive iteration without improvements 406
+Objective tollerance: 0.001  Actual precision: 1492.191181624039
+
+
+******* Iteration-524 *******
+Consecutive iteration without improvements 407
+Objective tollerance: 0.001  Actual precision: 1821.1230365798922
+
+
+******* Iteration-525 *******
+Consecutive iteration without improvements 408
+Objective tollerance: 0.001  Actual precision: 2732.302259558278
+
+
+******* Iteration-526 *******
+Consecutive iteration without improvements 409
+Objective tollerance: 0.001  Actual precision: 3220.1795787086694
+
+
+******* Iteration-527 *******
+Consecutive iteration without improvements 410
+Objective tollerance: 0.001  Actual precision: 2163.769648209839
+
+
+******* Iteration-528 *******
+Consecutive iteration without improvements 411
+Objective tollerance: 0.001  Actual precision: 1960.1278221971975
+
+
+******* Iteration-529 *******
+Consecutive iteration without improvements 412
+Objective tollerance: 0.001  Actual precision: 2901.9837484070545
+
+
+******* Iteration-530 *******
+Consecutive iteration without improvements 413
+Objective tollerance: 0.001  Actual precision: 3785.0696852471688
+
+
+******* Iteration-531 *******
+Consecutive iteration without improvements 414
+Objective tollerance: 0.001  Actual precision: 3427.007570540747
+
+
+******* Iteration-532 *******
+Consecutive iteration without improvements 415
+Objective tollerance: 0.001  Actual precision: 2862.6233994995628
+
+
+******* Iteration-533 *******
+Consecutive iteration without improvements 416
+Objective tollerance: 0.001  Actual precision: 2166.2527761516994
+
+
+******* Iteration-534 *******
+Consecutive iteration without improvements 417
+Objective tollerance: 0.001  Actual precision: 2946.108273046279
+
+
+******* Iteration-535 *******
+Consecutive iteration without improvements 418
+Objective tollerance: 0.001  Actual precision: 3633.11666223186
+
+
+******* Iteration-536 *******
+Consecutive iteration without improvements 419
+Objective tollerance: 0.001  Actual precision: 6809.5590826401
+
+
+******* Iteration-537 *******
+Consecutive iteration without improvements 420
+Objective tollerance: 0.001  Actual precision: 1868.5528239076964
+
+
+******* Iteration-538 *******
+Consecutive iteration without improvements 421
+Objective tollerance: 0.001  Actual precision: 5429.097104454646
+
+
+******* Iteration-539 *******
+Consecutive iteration without improvements 422
+Objective tollerance: 0.001  Actual precision: 7381.027661275349
+
+
+******* Iteration-540 *******
+Consecutive iteration without improvements 423
+Objective tollerance: 0.001  Actual precision: 10219.507980170169
+
+
+******* Iteration-541 *******
+Consecutive iteration without improvements 424
+Objective tollerance: 0.001  Actual precision: 3526.4217506277746
+
+
+******* Iteration-542 *******
+Consecutive iteration without improvements 425
+Objective tollerance: 0.001  Actual precision: 7058.093673265425
+
+
+******* Iteration-543 *******
+Consecutive iteration without improvements 426
+Objective tollerance: 0.001  Actual precision: 4094.423111001513
+
+
+******* Iteration-544 *******
+Consecutive iteration without improvements 427
+Objective tollerance: 0.001  Actual precision: 6637.722397073666
+
+
+******* Iteration-545 *******
+Consecutive iteration without improvements 428
+Objective tollerance: 0.001  Actual precision: 4172.517972715417
+
+
+******* Iteration-546 *******
+Consecutive iteration without improvements 429
+Objective tollerance: 0.001  Actual precision: 5732.469958660946
+
+
+******* Iteration-547 *******
+Consecutive iteration without improvements 430
+Objective tollerance: 0.001  Actual precision: 2996.7982257837994
+
+
+******* Iteration-548 *******
+Consecutive iteration without improvements 431
+Objective tollerance: 0.001  Actual precision: 4285.347242453929
+
+
+******* Iteration-549 *******
+Consecutive iteration without improvements 432
+Objective tollerance: 0.001  Actual precision: 2651.9149402925314
+
+
+******* Iteration-550 *******
+Consecutive iteration without improvements 433
+Objective tollerance: 0.001  Actual precision: 5417.033122574626
+
+
+******* Iteration-551 *******
+Consecutive iteration without improvements 434
+Objective tollerance: 0.001  Actual precision: 6010.8391616268
+
+
+******* Iteration-552 *******
+Consecutive iteration without improvements 435
+Objective tollerance: 0.001  Actual precision: 3628.492027452376
+
+
+******* Iteration-553 *******
+Consecutive iteration without improvements 436
+Objective tollerance: 0.001  Actual precision: 1869.6943803238826
+
+
+******* Iteration-554 *******
+Consecutive iteration without improvements 437
+Objective tollerance: 0.001  Actual precision: 4184.089834646277
+
+
+******* Iteration-555 *******
+Consecutive iteration without improvements 438
+Objective tollerance: 0.001  Actual precision: 1785.2890743752248
+
+
+******* Iteration-556 *******
+Consecutive iteration without improvements 439
+Objective tollerance: 0.001  Actual precision: 2711.532341460271
+
+
+******* Iteration-557 *******
+Consecutive iteration without improvements 440
+Objective tollerance: 0.001  Actual precision: 2855.6684716455793
+
+
+******* Iteration-558 *******
+Consecutive iteration without improvements 441
+Objective tollerance: 0.001  Actual precision: 3474.656016267846
+
+
+******* Iteration-559 *******
+Consecutive iteration without improvements 442
+Objective tollerance: 0.001  Actual precision: 9872.98913367882
+
+
+******* Iteration-560 *******
+Consecutive iteration without improvements 443
+Objective tollerance: 0.001  Actual precision: 6139.644960615815
+
+
+******* Iteration-561 *******
+Consecutive iteration without improvements 444
+Objective tollerance: 0.001  Actual precision: 11856.229236292887
+
+
+******* Iteration-562 *******
+Consecutive iteration without improvements 445
+Objective tollerance: 0.001  Actual precision: 8741.857286491972
+
+
+******* Iteration-563 *******
+Consecutive iteration without improvements 446
+Objective tollerance: 0.001  Actual precision: 12367.222635921984
+
+
+******* Iteration-564 *******
+Consecutive iteration without improvements 447
+Objective tollerance: 0.001  Actual precision: 11353.40963953699
+
+
+******* Iteration-565 *******
+Consecutive iteration without improvements 448
+Objective tollerance: 0.001  Actual precision: 12219.94172992444
+
+
+******* Iteration-566 *******
+Consecutive iteration without improvements 449
+Objective tollerance: 0.001  Actual precision: 9278.307304653203
+
+
+******* Iteration-567 *******
+Consecutive iteration without improvements 450
+Objective tollerance: 0.001  Actual precision: 5950.477910576474
+
+
+******* Iteration-568 *******
+Consecutive iteration without improvements 451
+Objective tollerance: 0.001  Actual precision: 6668.389403788974
+
+
+******* Iteration-569 *******
+Consecutive iteration without improvements 452
+Objective tollerance: 0.001  Actual precision: 7801.797131780192
+
+
+******* Iteration-570 *******
+Consecutive iteration without improvements 453
+Objective tollerance: 0.001  Actual precision: 4804.665793483807
+
+
+******* Iteration-571 *******
+Consecutive iteration without improvements 454
+Objective tollerance: 0.001  Actual precision: 8010.6892577556255
+
+
+******* Iteration-572 *******
+Consecutive iteration without improvements 455
+Objective tollerance: 0.001  Actual precision: 4805.026668558239
+
+
+******* Iteration-573 *******
+Consecutive iteration without improvements 456
+Objective tollerance: 0.001  Actual precision: 4653.965021946786
+
+
+******* Iteration-574 *******
+Consecutive iteration without improvements 457
+Objective tollerance: 0.001  Actual precision: 3259.149712069575
+
+
+******* Iteration-575 *******
+Consecutive iteration without improvements 458
+Objective tollerance: 0.001  Actual precision: 6269.56825442701
+
+
+******* Iteration-576 *******
+Consecutive iteration without improvements 459
+Objective tollerance: 0.001  Actual precision: 5864.55826111459
+
+
+******* Iteration-577 *******
+Consecutive iteration without improvements 460
+Objective tollerance: 0.001  Actual precision: 8321.279537352928
+
+
+******* Iteration-578 *******
+Consecutive iteration without improvements 461
+Objective tollerance: 0.001  Actual precision: 7679.785861626811
+
+
+******* Iteration-579 *******
+Consecutive iteration without improvements 462
+Objective tollerance: 0.001  Actual precision: 9954.275572751452
+
+
+******* Iteration-580 *******
+Consecutive iteration without improvements 463
+Objective tollerance: 0.001  Actual precision: 12363.015370936453
+
+
+******* Iteration-581 *******
+Consecutive iteration without improvements 464
+Objective tollerance: 0.001  Actual precision: 7680.2299255374155
+
+
+******* Iteration-582 *******
+Consecutive iteration without improvements 465
+Objective tollerance: 0.001  Actual precision: 8375.909462818352
+
+
+******* Iteration-583 *******
+Consecutive iteration without improvements 466
+Objective tollerance: 0.001  Actual precision: 10322.561990851109
+
+
+******* Iteration-584 *******
+Consecutive iteration without improvements 467
+Objective tollerance: 0.001  Actual precision: 7851.235708982874
+
+
+******* Iteration-585 *******
+Consecutive iteration without improvements 468
+Objective tollerance: 0.001  Actual precision: 10855.042873770768
+
+
+******* Iteration-586 *******
+Consecutive iteration without improvements 469
+Objective tollerance: 0.001  Actual precision: 10082.21980560696
+
+
+******* Iteration-587 *******
+Consecutive iteration without improvements 470
+Objective tollerance: 0.001  Actual precision: 7805.595691884948
+
+
+******* Iteration-588 *******
+Consecutive iteration without improvements 471
+Objective tollerance: 0.001  Actual precision: 11230.044395445553
+
+
+******* Iteration-589 *******
+Consecutive iteration without improvements 472
+Objective tollerance: 0.001  Actual precision: 9361.583842429627
+
+
+******* Iteration-590 *******
+Consecutive iteration without improvements 473
+Objective tollerance: 0.001  Actual precision: 7859.873496591624
+
+
+******* Iteration-591 *******
+Consecutive iteration without improvements 474
+Objective tollerance: 0.001  Actual precision: 9178.18173541265
+
+
+******* Iteration-592 *******
+Consecutive iteration without improvements 475
+Objective tollerance: 0.001  Actual precision: 7163.961354667686
+
+
+******* Iteration-593 *******
+Consecutive iteration without improvements 476
+Objective tollerance: 0.001  Actual precision: 8185.182882407028
+
+
+******* Iteration-594 *******
+Consecutive iteration without improvements 477
+Objective tollerance: 0.001  Actual precision: 3949.268173311197
+
+
+******* Iteration-595 *******
+Consecutive iteration without improvements 478
+Objective tollerance: 0.001  Actual precision: 3644.3645929095437
+
+
+******* Iteration-596 *******
+Consecutive iteration without improvements 479
+Objective tollerance: 0.001  Actual precision: 8937.25765197903
+
+
+******* Iteration-597 *******
+Consecutive iteration without improvements 480
+Objective tollerance: 0.001  Actual precision: 6504.592783578421
+
+
+******* Iteration-598 *******
+Consecutive iteration without improvements 481
+Objective tollerance: 0.001  Actual precision: 3423.3311664108187
+
+
+******* Iteration-599 *******
+Consecutive iteration without improvements 482
+Objective tollerance: 0.001  Actual precision: 3505.944369678708
+
+
+******* Iteration-600 *******
+Consecutive iteration without improvements 483
+Objective tollerance: 0.001  Actual precision: 4574.175656817006
+
+
+******* Iteration-601 *******
+Consecutive iteration without improvements 484
+Objective tollerance: 0.001  Actual precision: 3900.6240043098633
+
+
+******* Iteration-602 *******
+Consecutive iteration without improvements 485
+Objective tollerance: 0.001  Actual precision: 3228.2622166024407
+
+
+******* Iteration-603 *******
+Consecutive iteration without improvements 486
+Objective tollerance: 0.001  Actual precision: 6714.721386125062
+
+
+******* Iteration-604 *******
+Consecutive iteration without improvements 487
+Objective tollerance: 0.001  Actual precision: 3922.3035336479684
+
+
+******* Iteration-605 *******
+Consecutive iteration without improvements 488
+Objective tollerance: 0.001  Actual precision: 3936.7879089675835
+
+
+******* Iteration-606 *******
+Consecutive iteration without improvements 489
+Objective tollerance: 0.001  Actual precision: 2267.417732361936
+
+
+******* Iteration-607 *******
+Consecutive iteration without improvements 490
+Objective tollerance: 0.001  Actual precision: 2316.9554337434824
+
+
+******* Iteration-608 *******
+Consecutive iteration without improvements 491
+Objective tollerance: 0.001  Actual precision: 3996.1589859944556
+
+
+******* Iteration-609 *******
+Consecutive iteration without improvements 492
+Objective tollerance: 0.001  Actual precision: 2506.5758018511715
+
+
+******* Iteration-610 *******
+Consecutive iteration without improvements 493
+Objective tollerance: 0.001  Actual precision: 2934.5074517431076
+
+
+******* Iteration-611 *******
+Consecutive iteration without improvements 494
+Objective tollerance: 0.001  Actual precision: 1947.179236090852
+
+
+******* Iteration-612 *******
+Consecutive iteration without improvements 495
+Objective tollerance: 0.001  Actual precision: 1675.3052094911516
+
+
+******* Iteration-613 *******
+Consecutive iteration without improvements 496
+Objective tollerance: 0.001  Actual precision: 1585.6755546956033
+
+
+******* Iteration-614 *******
+Consecutive iteration without improvements 497
+Objective tollerance: 0.001  Actual precision: 2892.626010347025
+
+
+******* Iteration-615 *******
+Consecutive iteration without improvements 498
+Objective tollerance: 0.001  Actual precision: 2089.21011624528
+
+
+******* Iteration-616 *******
+Consecutive iteration without improvements 499
+Objective tollerance: 0.001  Actual precision: 2396.017193141264
+
+
+******* Iteration-617 *******
+Third stopping criterion, reach maximum consecutive iteration without improvements
+
+Centroids:
+ [[ 0.28543381 -0.66831228]
+ [ 0.32230949  1.91018552]
+ [-0.41442442  0.55223602]
+ [ 1.49595661 -0.06645045]
+ [-1.15929557 -0.74229862]]
+
+Membership Vector:
+ [2 4 4 2 2 3 4 2 0 0 0 4 0 2 3 2 2 2 1 1 0 0 0 3 2 0 0 2 1 4 2 0 3 2 3 2 4
+ 4 2 0 2 2 1 2 4 4 0 0 2 4 2 4 0 0 4 4 2 4 3 0 0 2 0 0 2 2 2 4 3 0 0 0 4 2
+ 4 2 2 3 0 3 1 0 1 0 0 0 4 0 2 2 2 4 3 2 0 0 4 2 0 2 4 0 0 2 2 0 2 1 0 1 2
+ 2 4 2 1 4 0 4 2 0 3 2 1 2 2 0 0 0 4 2 0 0 2 3 4 4 4 0 2 3 2 3 0 0 0 2 3 3
+ 0 0 4 2 0 4 3 3 2 2 1 2 3 0 0 2 4 0 2 1 2 3 2 0 0 1 0 3 0 0 1 0 0 1 2 4 3
+ 3 1 3 3 3 2 4 2 1 3 2 4 2 3 2 0 4 1 2 1 2 2 2 2 2 1 4 1 1 0 1 2 1 4 1 2 2
+ 2 4 0 4 2 2 4 4 0 4 3 3 4 0 3 0 0 4 4 4 4 4 0 2 0 0 0 0 2 2 3 0 2 2 4 4 4
+ 0 2 1 3 0 2 1 2 1 4 0 4 3 0 0 0 4 4 4 0 3 4 0 4 4 3 1 0 0 4 0 0 4 0 4 2 4
+ 4 2 3 0 3 0 0 3 1 3 0 4 0 1 0 1 0 0 0 3 3 2 3 1 1 0 3 4 0 0 0 4 1 4 3 3 3
+ 2 1 0 1 1 2 4 3 3 3 0 1]
+
+MSSC:
+ 206.54994453448415
+
+
+*********** KMeansDE ***********
+[1 0 0 1 1 2 3 1 3 3 3 0 3 1 2 1 3 1 4 4 3 3 3 2 1 3 3 1 4 0 1 3 1 1 2 1 0
+ 0 1 3 1 1 4 1 0 3 3 2 1 0 1 0 3 3 0 0 1 3 2 3 3 1 3 3 1 1 3 0 2 3 3 3 0 1
+ 0 1 1 2 3 2 4 3 4 3 3 3 3 3 1 1 1 0 2 1 3 3 0 1 3 1 0 3 3 1 1 3 1 4 3 4 1
+ 1 0 1 4 0 3 0 1 3 2 1 4 1 1 3 1 3 0 1 3 3 1 2 0 0 0 3 1 2 1 2 3 3 2 1 2 2
+ 3 3 0 1 3 3 2 2 1 1 4 1 4 3 3 1 3 3 1 4 1 2 1 2 3 4 3 2 3 3 4 3 3 4 1 0 2
+ 2 4 4 1 2 1 3 1 4 2 1 0 1 2 1 3 0 4 1 4 1 1 1 1 1 4 0 4 4 3 4 1 4 3 4 1 1
+ 1 0 3 0 1 1 0 0 3 0 2 2 0 3 2 3 3 0 0 0 0 0 3 1 3 3 3 3 1 0 2 3 1 1 0 0 3
+ 3 1 4 2 3 1 4 1 4 0 3 3 2 1 3 3 3 0 0 3 2 0 3 0 0 2 4 3 3 0 3 3 0 3 0 1 3
+ 0 1 2 3 2 3 3 2 4 2 1 0 3 4 3 4 3 3 3 2 2 1 2 4 4 3 2 0 3 3 3 0 4 0 2 2 2
+ 1 4 3 4 4 1 0 2 2 2 3 4]
+
+
+*********** PSO ***********
+[2 4 4 2 2 3 4 2 0 0 0 4 0 2 3 2 2 2 1 1 0 0 0 3 2 0 0 2 1 4 2 0 3 2 3 2 4
+ 4 2 0 2 2 1 2 4 4 0 0 2 4 2 4 0 0 4 4 2 4 3 0 0 2 0 0 2 2 2 4 3 0 0 0 4 2
+ 4 2 2 3 0 3 1 0 1 0 0 0 4 0 2 2 2 4 3 2 0 0 4 2 0 2 4 0 0 2 2 0 2 1 0 1 2
+ 2 4 2 1 4 0 4 2 0 3 2 1 2 2 0 0 0 4 2 0 0 2 3 4 4 4 0 2 3 2 3 0 0 0 2 3 3
+ 0 0 4 2 0 4 3 3 2 2 1 2 3 0 0 2 4 0 2 1 2 3 2 0 0 1 0 3 0 0 1 0 0 1 2 4 3
+ 3 1 3 3 3 2 4 2 1 3 2 4 2 3 2 0 4 1 2 1 2 2 2 2 2 1 4 1 1 0 1 2 1 4 1 2 2
+ 2 4 0 4 2 2 4 4 0 4 3 3 4 0 3 0 0 4 4 4 4 4 0 2 0 0 0 0 2 2 3 0 2 2 4 4 4
+ 0 2 1 3 0 2 1 2 1 4 0 4 3 0 0 0 4 4 4 0 3 4 0 4 4 3 1 0 0 4 0 0 4 0 4 2 4
+ 4 2 3 0 3 0 0 3 1 3 0 4 0 1 0 1 0 0 0 3 3 2 3 1 1 0 3 4 0 0 0 4 1 4 3 3 3
+ 2 1 0 1 1 2 4 3 3 3 0 1]
+
+Process finished with exit code 0

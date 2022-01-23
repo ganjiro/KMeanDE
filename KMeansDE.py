@@ -1,5 +1,6 @@
 import math
 import random
+import time
 
 import numpy as np  # For data management
 import pandas as pd  # For data management
@@ -21,7 +22,10 @@ class Solution:
 class KMeansDE(BaseEstimator, ClusterMixin):
 
     def __init__(self, n_clusters=3, max_iter=5000, tol=1e-4,
-                 verbose=0, population_lenght=100, kmeans_max_iter=5000, scaling=True, dataset_name="None"):
+                 verbose=0, population_lenght=100, kmeans_max_iter=5000, scaling=False, dataset_name="None", test=False):
+        self.test = test
+        if self.test:
+            self.start = time.time()
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.tol = tol
@@ -53,7 +57,8 @@ class KMeansDE(BaseEstimator, ClusterMixin):
             print(data.head())
 
         if self.scaling:
-            print("\nScaling dataset...")
+            if self.verbose:
+                print("\nScaling dataset...")
             scaler = StandardScaler()
             scaled_array = scaler.fit_transform(data)
             data = pd.DataFrame(scaled_array, columns=data.columns)
@@ -66,7 +71,8 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
         self.data = data.to_numpy()
 
-        print("\n******* Initialization *******")
+        if self.verbose:
+            print("\n******* Initialization *******")
         return
 
     def _initializeS(self):
@@ -88,7 +94,12 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
         return
 
-    def _stopping_criterion(self, consecutive_else, pick_success):
+    def _stopping_criterion(self, consecutive_else, pick_success, itr):
+        if itr >= self.max_iter:
+            if self.verbose:
+                print("First stopping criterion, reach maximum iteration limit\n")
+            return False
+
         if not pick_success:
             if self.verbose:
                 print("Second stopping criterion, population has converged\n")
@@ -186,9 +197,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
                 best = trial
                 best_index = i
         if self.verbose:
-            print("Best solution is the" + str(best_index + 1) + "-th element of the population,\ncentroids:\n",
-                  self.population[best_index].cluster_centers, "\nmembership:\n",
-                  self.population[best_index].label)
+            print("Best solution is the" + str(best_index + 1) + "-th element of the population\n\n")
         return self.population[best_index]
 
     def fit(self, data):
@@ -200,9 +209,10 @@ class KMeansDE(BaseEstimator, ClusterMixin):
         consecutive_else = 0
         count_iter = 0
         pick_success = True
-        while self._stopping_criterion(consecutive_else, pick_success):
+        while self._stopping_criterion(consecutive_else, pick_success, count_iter):
             count_iter += 1
-            print("\n\n******* Iteration-" + str(count_iter) + " *******")
+            if self.verbose:
+                print("\n\n******* Iteration-" + str(count_iter) + " *******")
 
             for i in range(self.population_lenght):
 
@@ -218,10 +228,20 @@ class KMeansDE(BaseEstimator, ClusterMixin):
                 else:
                     count_else += 1
                     consecutive_else += 1
+        end = time.time()
         best_solution = self._best_solution()
         self.best_solution_ss_distance_ = best_solution.ss_distance
         self.labels_ = best_solution.label
         self.cluster_centers_ = best_solution.cluster_centers
+        if self.verbose or self.test:
+            print("Cntroids:\n",
+                  self.cluster_centers_, "\nMembership Vector:\n",
+                  self.labels_, "\nMSSC:\n", self.best_solution_ss_distance_)
+        if self.test:
+            print("Time:\n", end-self.start)
+        if self.verbose or self.test:
+            print("\n******* Ending KMeansDE **************************************************************************************************\n\n")
+
         return self
 
     def _matching(self, reference, parent_1, parent_2):
@@ -267,8 +287,8 @@ class KMeansDE(BaseEstimator, ClusterMixin):
         return population_unique
 
     def _print_parameters(self):
-        print("******* Starting KMeansDE *******")
-        print("Datset:", self.dataset_name)
+        print("******* Starting KMeansDE ****************************************************************************************************************")
+        print("Dataset:", self.dataset_name)
         if self.scaling:
             print("Dataset will be scaled")
         else:
@@ -282,38 +302,39 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
 
 if __name__ == '__main__':
-    dataset_name = "bupa.data"
+    dataset_name = "datasets/bupa.data"
     dataset = np.loadtxt(dataset_name, delimiter=',')
-
     dataset = np.delete(dataset, 6, 1)
-    dataset = np.delete(dataset, 5, 1)
-    dataset = np.delete(dataset, 4, 1)
-    dataset = np.delete(dataset, 3, 1)
-    for _ in range(250):
-        dataset = np.delete(dataset, -1, 0)
-    dataset = np.delete(dataset, 2, 1)
-    # dataset = np.delete(dataset, 1, 1)
 
     km = KMeansDE(n_clusters=3, max_iter=5000, verbose=1, scaling=True, dataset_name=dataset_name)
 
     membership = km.fit_predict(dataset)
-    print("\n\nMembership vector:")
-    print(membership)
-    print("\n\nCentroids:")
-    print(km.cluster_centers_)
 
-# small Data in 2d
+# Full Data 2d, 3 clusters
 '''
-Membership vector:
-[1 2 2 1 2 0 2 2 0 2 2 2 2 1 0 1 2 1 1 1 0 0 2 0 1 0 2 2 1 2 1 0 0 1 0 0 2
- 2 1 2 1 2 1 1 2 2 0 0 1 2 1 2 0 0 2 2 1 2 0 2 2 1 0 0 2 1 2 2 0 2 2 2 2 1
- 2 1 1 0 0 0 1 2 1 0 0 0 2 0 1 1 2 2 0 2 2]
+Second stopping criterion, population has converged
 
+(Best solution is the1-th element of the population)
 
 Centroids:
-[[ 1.12441699 -0.39982805]
- [-0.27945948  1.2060347 ]
- [-0.55643544 -0.53091657]]
+ [[-0.77753582 -0.47007172]
+ [ 0.01586457  1.33904552]
+ [ 0.85544799 -0.43087874]] 
+
+Membership Vector:
+ [1 0 0 1 0 2 0 0 2 0 0 0 0 0 2 1 0 1 1 1 2 2 0 2 0 2 0 0 1 0 0 2 2 1 2 2 0
+ 0 1 0 1 0 1 1 0 0 2 2 2 0 0 0 2 2 0 0 0 0 2 0 0 0 2 2 0 1 0 0 2 0 0 0 0 0
+ 0 1 1 2 2 2 1 0 1 2 2 2 0 2 1 0 0 0 2 0 0 0 0 1 0 2 0 2 0 1 1 0 1 1 2 1 0
+ 1 0 1 1 0 2 0 1 2 2 1 1 0 1 0 2 2 0 0 2 2 0 2 0 0 0 2 0 2 1 2 2 2 2 1 2 2
+ 2 2 0 1 0 0 2 2 2 1 1 0 1 2 0 2 0 0 1 1 1 2 1 2 0 1 0 2 2 2 1 0 2 1 2 0 2
+ 2 1 1 2 1 0 0 1 1 2 1 0 0 2 1 2 0 1 0 1 1 0 1 1 0 1 0 1 1 2 1 1 1 0 1 1 1
+ 0 0 0 0 1 0 0 0 2 0 2 2 0 2 2 2 2 0 0 0 0 0 2 1 2 2 2 0 1 0 2 2 0 0 0 0 0
+ 0 0 1 2 2 0 1 1 1 0 2 0 2 2 0 2 0 0 0 2 2 0 0 0 0 2 1 2 2 0 2 0 0 2 0 1 0
+ 0 0 2 2 2 0 2 2 1 2 2 0 2 1 2 1 2 2 2 2 2 1 2 1 1 2 2 0 2 2 2 0 1 0 2 2 2
+ 1 1 2 1 1 1 0 2 2 2 2 1] 
+
+MSSC:
+ 309.78274869538984
 '''
 
 
