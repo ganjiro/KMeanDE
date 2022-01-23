@@ -56,6 +56,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
         self.social = social
         self.inertia = inertia
         self.max_cons_iter = max_cons_iter
+        self.best_solution_ss_distance_ = None
         if self.verbose:
             self.print_parameters()
 
@@ -209,6 +210,7 @@ class PSClustering(BaseEstimator, ClusterMixin):
                 count_cons_iter += 1
 
         best_solution = self._best_solution()
+        self.best_solution_ss_distance_ = best_solution.ss_distance
         self.labels_ = best_solution.label
         self.cluster_centers_ = best_solution.cluster_centers
         return self

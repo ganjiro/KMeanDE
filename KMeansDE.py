@@ -33,6 +33,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
         self.population = None
         self.data = None
         self._print_parameters()
+        self.best_solution_ss_distance_ = None
 
     def _compute_crossover(self, parent_1, parent_2, parent_3):  # S1 + F(S2-S3)
         f = random.uniform(0.5, 0.8)
@@ -218,6 +219,7 @@ class KMeansDE(BaseEstimator, ClusterMixin):
                     count_else += 1
                     consecutive_else += 1
         best_solution = self._best_solution()
+        self.best_solution_ss_distance_ = best_solution.ss_distance
         self.labels_ = best_solution.label
         self.cluster_centers_ = best_solution.cluster_centers
         return self
