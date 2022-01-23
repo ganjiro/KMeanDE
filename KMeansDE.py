@@ -20,8 +20,8 @@ class Solution:
 
 class KMeansDE(BaseEstimator, ClusterMixin):
 
-    def __init__(self, n_clusters=2, max_iter=5000, tol=1e-4,
-                 verbose=0, population_lenght=150, kmeans_max_iter=5000, scaling=True, dataset_name="None"):
+    def __init__(self, n_clusters=3, max_iter=5000, tol=1e-4,
+                 verbose=0, population_lenght=100, kmeans_max_iter=5000, scaling=True, dataset_name="None"):
         self.n_clusters = n_clusters
         self.max_iter = max_iter
         self.tol = tol
@@ -281,21 +281,37 @@ class KMeansDE(BaseEstimator, ClusterMixin):
 
 if __name__ == '__main__':
     dataset_name = "bupa.data"
-    bupa_data = np.loadtxt(dataset_name, delimiter=',')
+    dataset = np.loadtxt(dataset_name, delimiter=',')
 
-    bupa_data = np.delete(bupa_data, 6, 1)
-    # bupa_data = np.delete(bupa_data, 5, 1)
-    # bupa_data = np.delete(bupa_data, 4, 1)
-    # bupa_data = np.delete(bupa_data, 3, 1)
+    dataset = np.delete(dataset, 6, 1)
+    dataset = np.delete(dataset, 5, 1)
+    dataset = np.delete(dataset, 4, 1)
+    dataset = np.delete(dataset, 3, 1)
+    for _ in range(250):
+        dataset = np.delete(dataset, -1, 0)
+    dataset = np.delete(dataset, 2, 1)
+    # dataset = np.delete(dataset, 1, 1)
 
-    # for _ in range(250):
-    #     data = np.delete(data, -1, 0)
+    km = KMeansDE(n_clusters=3, max_iter=5000, verbose=1, scaling=True, dataset_name=dataset_name)
 
-    # bupa_data = np.delete(bupa_data, 2, 1)
-    # data = np.delete(data, 1, 1)
-
-    km = KMeansDE(n_clusters=5, verbose=1, scaling=True, dataset_name=dataset_name)
-    membership = km.fit_predict(bupa_data)
+    membership = km.fit_predict(dataset)
     print("\n\nMembership vector:")
     print(membership)
+    print("\n\nCentroids:")
+    print(km.cluster_centers_)
+
+# small Data in 2d
+'''
+Membership vector:
+[1 2 2 1 2 0 2 2 0 2 2 2 2 1 0 1 2 1 1 1 0 0 2 0 1 0 2 2 1 2 1 0 0 1 0 0 2
+ 2 1 2 1 2 1 1 2 2 0 0 1 2 1 2 0 0 2 2 1 2 0 2 2 1 0 0 2 1 2 2 0 2 2 2 2 1
+ 2 1 1 0 0 0 1 2 1 0 0 0 2 0 1 1 2 2 0 2 2]
+
+
+Centroids:
+[[ 1.12441699 -0.39982805]
+ [-0.27945948  1.2060347 ]
+ [-0.55643544 -0.53091657]]
+'''
+
 

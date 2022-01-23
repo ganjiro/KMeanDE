@@ -178,7 +178,7 @@ if __name__ == '__main__':
     bupa_data = np.loadtxt(dataset_name, delimiter=',')
     bupa_data = np.delete(bupa_data, 6, 1)
 
-    kkm = KernelKMeans(n_clusters=5, max_iter=5000, random_state=0, verbose=1, scaling=True, dataset_name=dataset_name)
+    kkm = KernelKMeans(n_clusters=3, max_iter=5000, random_state=0, verbose=1, scaling=True, dataset_name=dataset_name)
     membership = kkm.fit_predict(bupa_data)
     print("\n\nMembership vector:")
     print(membership)

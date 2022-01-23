@@ -1,6 +1,4 @@
 import math
-import random
-
 import numpy as np  # For data management
 import pandas as pd  # For data management
 from scipy.spatial import distance
@@ -41,7 +39,7 @@ class Particle:
 
 class PSClustering(BaseEstimator, ClusterMixin):
 
-    def __init__(self, n_clusters=2, max_iter=5000, tol=1e-3,
+    def __init__(self, n_clusters=3, max_iter=5000, tol=1e-3,
                  verbose=0, population_lenght=20, scaling=True,
                  dataset_name="None", cognitive=1.49, social=1.49, inertia=0.72, max_cons_iter=500):
         self.n_clusters = n_clusters
@@ -313,23 +311,24 @@ def compute_labels(X, sample_weight, x_squared_norms, centers, n_threads=1):
 
 if __name__ == '__main__':
     dataset_name = "bupa.data"
-    bupa_data = np.loadtxt(dataset_name, delimiter=',')
+    dataset = np.loadtxt(dataset_name, delimiter=',')
 
-    bupa_data = np.delete(bupa_data, 6, 1)
-    bupa_data = np.delete(bupa_data, 5, 1)
-    bupa_data = np.delete(bupa_data, 4, 1)
-    bupa_data = np.delete(bupa_data, 3, 1)
+    dataset = np.delete(dataset, 6, 1)
+    dataset = np.delete(dataset, 5, 1)
+    dataset = np.delete(dataset, 4, 1)
+    dataset = np.delete(dataset, 3, 1)
+    for _ in range(250):
+        dataset = np.delete(dataset, -1, 0)
+    dataset = np.delete(dataset, 2, 1)
+    # dataset = np.delete(dataset, 1, 1)
 
-    # for _ in range(250):
-    #     bupa_data = np.delete(bupa_data, -1, 0)
+    pso = PSClustering(n_clusters=3, max_iter=5000, verbose=1, scaling=True, dataset_name=dataset_name)
 
-    bupa_data = np.delete(bupa_data, 2, 1)
-    # data = np.delete(data, 1, 1)
-
-    km = PSClustering(n_clusters=5, verbose=1, scaling=True, dataset_name=dataset_name)
-
-    print(km.fit_predict(bupa_data))
-    print(km.cluster_centers_)
+    membership = pso.fit_predict(dataset)
+    print("\n\nMembership vector:")
+    print(membership)
+    print("\n\nCentroids:")
+    print(pso.cluster_centers_)
 
 # [[0.06059718  1.68454103]
 #  [1.49680408 - 0.21855616]
@@ -342,3 +341,17 @@ if __name__ == '__main__':
 #  [-0.24302265  1.74391844]
 #  [-1.19552677 -0.62618128]
 #  [-0.04631541  0.12639116]]
+
+# small data in 2d
+'''
+Membership vector:
+[2 0 0 2 0 1 0 0 1 0 0 0 0 2 1 2 0 2 2 2 1 1 0 1 2 1 0 0 2 0 2 0 1 2 1 2 0
+ 0 2 0 2 0 2 2 0 0 1 1 2 0 2 0 1 1 0 0 2 0 1 0 0 2 0 0 0 2 0 0 1 0 0 0 0 2
+ 0 2 2 1 0 1 2 0 2 1 1 1 0 1 2 2 0 0 1 0 0]
+
+
+Centroids:
+[[-0.45057064 -0.5547412 ]
+ [ 1.30837001 -0.26142896]
+ [-0.27664336  1.17191425]] 
+'''
